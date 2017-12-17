@@ -1,0 +1,739 @@
+
+==================== FINAL INTERFACE ====================
+2017-06-07 09:27:59.1915931 UTC
+
+interface main@main:Physics.Gravity 8002
+  interface hash: 0c2dfba11c9e2ddb3d38e8a45da6a829
+  ABI hash: 03159c9bd4fe084c98722742b05dc34b
+  export-list hash: 16f3a1591d0772174bea79ce6e3bd9b8
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: 13e874b1f0b5b838619a161195791a49
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Physics.Gravity.cAcceleration
+  Physics.Gravity.cForce
+  Physics.Gravity.cPosition
+  Physics.Gravity.cVelocity
+  Physics.Gravity.collidingWith
+  Physics.Gravity.updateBodies
+  Physics.Gravity.zeroBody
+  Physics.Gravity.Body{Physics.Gravity.Body acceleration mass position velocity}
+module dependencies: Math.Vector
+package dependencies: GLURaw-2.0.0.3@GLURaw-2.0.0.3-G12M6COyQIU5WfRlrIwPuj
+                      GLUT-2.7.0.12@GLUT-2.7.0.12-2MhssjvTvsoEqaoGvdwU4F
+                      ObjectName-1.1.0.1@ObjectName-1.1.0.1-EiFOWjUQWWuLyOhtrmuIWX
+                      OpenGL-3.0.2.0@OpenGL-3.0.2.0-4NExFyKSCLV2QLQh5nNNh9
+                      OpenGLRaw-3.2.4.0@OpenGLRaw-3.2.4.0-JDyGgOXR61GG549SwmWm2Q
+                      StateVar-1.1.0.4@StateVar-1.1.0.4-5dJbnTVECtEAhfJXPZKdbO
+                      array-0.5.1.1@array-0.5.1.1 base-4.9.1.0
+                      binary-0.8.3.0@binary-0.8.3.0
+                      bytestring-0.10.8.1@bytestring-0.10.8.1
+                      containers-0.5.7.1@containers-0.5.7.1
+                      deepseq-1.4.2.0@deepseq-1.4.2.0
+                      fixed-0.2.1.1@fixed-0.2.1.1-8Jr82l0kss5Gr4nEevmXlZ ghc-prim-0.5.0.0
+                      half-0.2.2.3@half-0.2.2.3-GHJ372Ls7FBA3PAGtGHfOR
+                      integer-gmp-1.0.0.1 stm-2.4.4.1@stm-2.4.4.1-JQn4hNPyYjP5m9AcbI88Ve
+                      text-1.2.2.1@text-1.2.2.1-Ji7hMs2U4BkBwavd4taEVR
+orphans: base-4.9.1.0:GHC.Base base-4.9.1.0:GHC.Float
+         binary-0.8.3.0@binary-0.8.3.0:Data.Binary.Generic
+         bytestring-0.10.8.1@bytestring-0.10.8.1:Data.ByteString.Builder
+         stm-2.4.4.1@stm-2.4.4.1-JQn4hNPyYjP5m9AcbI88Ve:Control.Monad.STM
+         text-1.2.2.1@text-1.2.2.1-Ji7hMs2U4BkBwavd4taEVR:Data.Text
+         text-1.2.2.1@text-1.2.2.1-Ji7hMs2U4BkBwavd4taEVR:Data.Text.Show
+family instance modules: base-4.9.1.0:Control.Applicative
+                         base-4.9.1.0:Data.Complex base-4.9.1.0:Data.Either
+                         base-4.9.1.0:Data.Functor.Const base-4.9.1.0:Data.Functor.Identity
+                         base-4.9.1.0:Data.List.NonEmpty base-4.9.1.0:Data.Monoid
+                         base-4.9.1.0:Data.Semigroup base-4.9.1.0:Data.Type.Equality
+                         base-4.9.1.0:Data.Version base-4.9.1.0:Data.Void
+                         base-4.9.1.0:GHC.Exts base-4.9.1.0:GHC.Generics
+                         base-4.9.1.0:GHC.IO.Exception base-4.9.1.0:GHC.TypeLits
+                         containers-0.5.7.1@containers-0.5.7.1:Data.IntMap.Base
+                         containers-0.5.7.1@containers-0.5.7.1:Data.IntSet.Base
+                         containers-0.5.7.1@containers-0.5.7.1:Data.Map.Base
+                         containers-0.5.7.1@containers-0.5.7.1:Data.Sequence
+                         containers-0.5.7.1@containers-0.5.7.1:Data.Set.Base
+                         text-1.2.2.1@text-1.2.2.1-Ji7hMs2U4BkBwavd4taEVR:Data.Text
+import  -/  GLUT-2.7.0.12@GLUT-2.7.0.12-2MhssjvTvsoEqaoGvdwU4F:Graphics.UI.GLUT 739277ef0ec51991551b963ff25b5bd3
+import  -/  OpenGLRaw-3.2.4.0@OpenGLRaw-3.2.4.0-JDyGgOXR61GG549SwmWm2Q:Graphics.GL.Types c6427027ca04c13c172d159d696662ed
+import  -/  base-4.9.1.0:Data.Foldable 254e836c2d813d34e47feb29bb8d40ed
+import  -/  base-4.9.1.0:GHC.Base 4caea1123ecf4b46e27cbccd6d279377
+import  -/  base-4.9.1.0:GHC.Float b620368aab866c2bb9d3a0a459566b84
+import  -/  base-4.9.1.0:GHC.List d11eb227c1c6fbfd89bb781d72eaea0d
+import  -/  base-4.9.1.0:GHC.Num 38b8aac8807c096c7f3ca3c1eff02939
+import  -/  base-4.9.1.0:GHC.Real b88ae4a48c079652623073a5bbf5c9b0
+import  -/  base-4.9.1.0:GHC.Show eca5834daba3b6a2bbbe64ab52056707
+import  -/  base-4.9.1.0:Prelude 74b3e204395920329f6de9d97206abe9
+import  -/  ghc-prim-0.5.0.0:GHC.Classes 16d48e012d23eaef9bca91ccdd572c02
+import  -/  Math.Vector 75eeb9eb9b10c0299ed6cc315c4561d5
+  exports: 51e9f72c030bff90ebfae489a39fc25f
+  Vector 8cfaf42bdea1a9bf155d3b5ff5d4a9b5
+  Vector 6d591394e3f5a694a629c053b83b1df3
+  dist 1c56cce7c0cde4f76e53b8442ece2466
+  dot 60a25b679695f9af88ba24e12c8c93d5
+  minus e8d3fb0e2bbbd45a7dbdfb8e0d352db9
+  plus c5acd0532d271cf39c17c9cbb20161e4
+  scale 188cbf110a9d5c66ca251286205cbb3b
+  unit 569db5fb5afe3b152888c5a4e8d84668
+  vecLength aaa2126689db84a3eab048eebef53017
+  zero 7f5d468971fb1b53574db47dc14f1f45
+6972b5dc968e8bd3d1f24c3c0913f4a6
+  $fEqBody :: GHC.Classes.Eq Physics.Gravity.Body
+  DFunId
+  {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Physics.Gravity.Body
+                  Physics.Gravity.$fEqBody_$c==
+                  Physics.Gravity.$fEqBody_$c/= -}
+6972b5dc968e8bd3d1f24c3c0913f4a6
+  $fEqBody_$c/= ::
+    Physics.Gravity.Body -> Physics.Gravity.Body -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(S(S)LLL),1*U(1*U(U),1*U,1*U,1*U)><S(S(S)LLL),1*U(1*U(U),1*U,1*U,1*U)>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (a :: Physics.Gravity.Body) (b :: Physics.Gravity.Body) ->
+                 case Physics.Gravity.$fEqBody_$c== a b of wild {
+                   GHC.Types.False -> GHC.Types.True
+                   GHC.Types.True -> GHC.Types.False }) -}
+6972b5dc968e8bd3d1f24c3c0913f4a6
+  $fEqBody_$c== ::
+    Physics.Gravity.Body -> Physics.Gravity.Body -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(S(S)LLL),1*U(1*U(U),1*U,1*U,1*U)><S(S(S)LLL),1*U(1*U(U),1*U,1*U,1*U)>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, False)
+                (\ (w :: Physics.Gravity.Body) (w1 :: Physics.Gravity.Body) ->
+                 case w of ww { Physics.Gravity.Body ww1 ww2 ww3 ww4 ->
+                 case ww1 of ww5 { GHC.Types.F# ww6 ->
+                 case w1 of ww7 { Physics.Gravity.Body ww8 ww9 ww10 ww11 ->
+                 case ww8 of ww12 { GHC.Types.F# ww13 ->
+                 Physics.Gravity.$w$c==
+                   ww6
+                   ww2
+                   ww3
+                   ww4
+                   ww13
+                   ww9
+                   ww10
+                   ww11 } } } }) -}
+6972b5dc968e8bd3d1f24c3c0913f4a6
+  $fShowBody :: GHC.Show.Show Physics.Gravity.Body
+  DFunId
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Physics.Gravity.Body
+                  Physics.Gravity.$fShowBody_$cshowsPrec
+                  Physics.Gravity.$fShowBody_$cshow
+                  Physics.Gravity.$fShowBody_$cshowList -}
+6972b5dc968e8bd3d1f24c3c0913f4a6
+  $fShowBody1 :: Physics.Gravity.Body -> GHC.Show.ShowS
+  {- Arity: 1,
+     Unfolding: (\ (w :: Physics.Gravity.Body) ->
+                 case w of ww { Physics.Gravity.Body ww1 ww2 ww3 ww4 ->
+                 Physics.Gravity.$w$cshowsPrec 0# ww1 ww2 ww3 ww4 }) -}
+709d7a1fbf376fd2818a51b10e33d135
+  $fShowBody2 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "}"#) -}
+adbaa4e0895536ec003cfe53da6b0067
+  $fShowBody3 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "acceleration = "#) -}
+2fac6e181c16eb8bb2ca1111366a2f00
+  $fShowBody4 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "velocity = "#) -}
+b816f2ac3cdf5fdc43dd041aa31d3e8b
+  $fShowBody5 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "position = "#) -}
+d9c7e3f270be965a617c65c1fb01c5d1
+  $fShowBody6 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# ", "#) -}
+32a1094793d4f4065bc09d6480031a2b
+  $fShowBody7 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "mass = "#) -}
+17ab42a8b13e0ed7d1416d2302403b4a
+  $fShowBody8 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "Body {"#) -}
+ead6efee11a3a9a659796ab06704121c
+  $fShowBody9 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 0#) -}
+6972b5dc968e8bd3d1f24c3c0913f4a6
+  $fShowBody_$cshow :: Physics.Gravity.Body -> GHC.Base.String
+  {- Arity: 1, Strictness: <S,1*U(1*U(U),1*U,1*U,1*U)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (x :: Physics.Gravity.Body) ->
+                 Physics.Gravity.$fShowBody_$cshowsPrec
+                   GHC.Show.shows22
+                   x
+                   (GHC.Types.[] @ GHC.Types.Char)) -}
+6972b5dc968e8bd3d1f24c3c0913f4a6
+  $fShowBody_$cshowList :: [Physics.Gravity.Body] -> GHC.Show.ShowS
+  {- Arity: 2,
+     Unfolding: (GHC.Show.showList__
+                   @ Physics.Gravity.Body
+                   Physics.Gravity.$fShowBody1) -}
+6972b5dc968e8bd3d1f24c3c0913f4a6
+  $fShowBody_$cshowsPrec ::
+    GHC.Types.Int -> Physics.Gravity.Body -> GHC.Show.ShowS
+  {- Arity: 2, Strictness: <S(S),1*U(U)><S,1*U(1*U(U),1*U,1*U,1*U)>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, False)
+                (\ (w :: GHC.Types.Int) (w1 :: Physics.Gravity.Body) ->
+                 case w of ww { GHC.Types.I# ww1 ->
+                 case w1 of ww2 { Physics.Gravity.Body ww3 ww4 ww5 ww6 ->
+                 Physics.Gravity.$w$cshowsPrec ww1 ww3 ww4 ww5 ww6 } }) -}
+56c5d15a0ebbea7bf55e931270d34960
+  $s^1 :: Graphics.GL.Types.GLfloat
+  {- Strictness: x -}
+0c0d2915a5912af14a1236e63aca3558
+  $s^2 :: GHC.Integer.Type.Integer
+  {- HasNoCafRefs, Unfolding: (0) -}
+11497172b02dcadec23ed2fdc0535955
+  $seven1 :: GHC.Integer.Type.Integer
+  {- HasNoCafRefs, Unfolding: (2) -}
+37942128ef2bb63e9e3f53849ab87b28
+  $tc'Body :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   10509086065221344745##
+                   10676278080505587713##
+                   Physics.Gravity.$trModule
+                   Physics.Gravity.$tc'Body1) -}
+12fea2dc4d6e76a7c1ee35b64da65e93
+  $tc'Body1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'Body"#) -}
+d3f699a3beb0d87dcebda6ebd8ce032e
+  $tcBody :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   12275676639701055352##
+                   12371783352337237344##
+                   Physics.Gravity.$trModule
+                   Physics.Gravity.$tcBody1) -}
+549189cb1727579932c1852c31efec3e
+  $tcBody1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "Body"#) -}
+41d8247a1171bd8e023dbee9a6dfc158
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module
+                   Physics.Gravity.$trModule2
+                   Physics.Gravity.$trModule1) -}
+3de8e97034a1bee0b28f721db1cd3484
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "Physics.Gravity"#) -}
+0450cf70e02d3b9ff2a6c795236a5451
+  $trModule2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "main"#) -}
+a79df61f3d61e3c5339360b75b532f86
+  $w$c== ::
+    GHC.Prim.Float#
+    -> Math.Vector.Vector Graphics.GL.Types.GLfloat
+    -> Math.Vector.Vector Graphics.GL.Types.GLfloat
+    -> Math.Vector.Vector Graphics.GL.Types.GLfloat
+    -> GHC.Prim.Float#
+    -> Math.Vector.Vector Graphics.GL.Types.GLfloat
+    -> Math.Vector.Vector Graphics.GL.Types.GLfloat
+    -> Math.Vector.Vector Graphics.GL.Types.GLfloat
+    -> GHC.Types.Bool
+  {- Arity: 8, HasNoCafRefs,
+     Strictness: <S,U><L,1*U><L,1*U><L,1*U><S,U><L,1*U><L,1*U><L,1*U>,
+     Inline: [0] -}
+d4b9500b60e1f14af469dd96a528f89f
+  $w$cshowsPrec ::
+    GHC.Prim.Int#
+    -> Graphics.GL.Types.GLfloat
+    -> Math.Vector.Vector Graphics.GL.Types.GLfloat
+    -> Math.Vector.Vector Graphics.GL.Types.GLfloat
+    -> Math.Vector.Vector Graphics.GL.Types.GLfloat
+    -> GHC.Show.ShowS
+  {- Arity: 5, Strictness: <S,U><L,1*U(U)><L,1*U><L,1*U><L,1*U>,
+     Inline: [0],
+     Unfolding: (\ (ww :: GHC.Prim.Int#)
+                   (ww1 :: Graphics.GL.Types.GLfloat)
+                   (ww2 :: Math.Vector.Vector Graphics.GL.Types.GLfloat)
+                   (ww3 :: Math.Vector.Vector Graphics.GL.Types.GLfloat)
+                   (ww4 :: Math.Vector.Vector Graphics.GL.Types.GLfloat) ->
+                 let {
+                   f :: GHC.Base.String -> GHC.Base.String
+                   = case ww1 of ww5 { GHC.Types.F# ww6 ->
+                     GHC.Float.$w$sshowSignedFloat1
+                       GHC.Float.$fShowFloat_$sshowFloat
+                       Physics.Gravity.$fShowBody9
+                       ww6 }
+                 } in
+                 let {
+                   f1 :: GHC.Base.String -> GHC.Base.String
+                   = Math.Vector.$w$cshowsPrec
+                       @ GHC.Types.Float
+                       GHC.Float.$fShowFloat
+                       0#
+                       ww2
+                 } in
+                 let {
+                   f2 :: GHC.Base.String -> GHC.Base.String
+                   = Math.Vector.$w$cshowsPrec
+                       @ GHC.Types.Float
+                       GHC.Float.$fShowFloat
+                       0#
+                       ww3
+                 } in
+                 let {
+                   f3 :: GHC.Base.String -> GHC.Base.String
+                   = Math.Vector.$w$cshowsPrec
+                       @ GHC.Types.Float
+                       GHC.Float.$fShowFloat
+                       0#
+                       ww4
+                 } in
+                 let {
+                   p :: GHC.Show.ShowS {- Arity: 1, Strictness: <L,1*U> -}
+                   = \ (x :: GHC.Base.String) ->
+                     GHC.Base.++
+                       @ GHC.Types.Char
+                       Physics.Gravity.$fShowBody8
+                       (GHC.Base.++
+                          @ GHC.Types.Char
+                          Physics.Gravity.$fShowBody7
+                          (f (GHC.Base.++
+                                @ GHC.Types.Char
+                                Physics.Gravity.$fShowBody6
+                                (GHC.Base.++
+                                   @ GHC.Types.Char
+                                   Physics.Gravity.$fShowBody5
+                                   (f1
+                                      (GHC.Base.++
+                                         @ GHC.Types.Char
+                                         Physics.Gravity.$fShowBody6
+                                         (GHC.Base.++
+                                            @ GHC.Types.Char
+                                            Physics.Gravity.$fShowBody4
+                                            (f2
+                                               (GHC.Base.++
+                                                  @ GHC.Types.Char
+                                                  Physics.Gravity.$fShowBody6
+                                                  (GHC.Base.++
+                                                     @ GHC.Types.Char
+                                                     Physics.Gravity.$fShowBody3
+                                                     (f3
+                                                        (GHC.Base.++
+                                                           @ GHC.Types.Char
+                                                           Physics.Gravity.$fShowBody2
+                                                           x))))))))))))
+                 } in
+                 case GHC.Prim.tagToEnum#
+                        @ GHC.Types.Bool
+                        (GHC.Prim.>=# ww 11#) of wild {
+                   GHC.Types.False -> p
+                   GHC.Types.True
+                   -> \ (x :: GHC.Base.String) ->
+                      GHC.Types.:
+                        @ GHC.Types.Char
+                        GHC.Show.shows7
+                        (p (GHC.Types.: @ GHC.Types.Char GHC.Show.shows4 x)) }) -}
+b58a32b3e3ff14f00b9e6548240d05e5
+  $w$s^ ::
+    Graphics.GL.Types.GLfloat
+    -> GHC.Integer.Type.Integer -> GHC.Prim.Float#
+  {- Arity: 2, Strictness: <L,U(U)><S,U>, Inline: [0],
+     Unfolding: (\ (w :: Graphics.GL.Types.GLfloat)
+                   (w1 :: GHC.Integer.Type.Integer) ->
+                 case GHC.Integer.Type.ltInteger#
+                        w1
+                        Physics.Gravity.$s^2 of wild { DEFAULT ->
+                 case GHC.Prim.tagToEnum# @ GHC.Types.Bool wild of wild1 {
+                   GHC.Types.False
+                   -> case GHC.Integer.Type.eqInteger#
+                             w1
+                             Physics.Gravity.$s^2 of wild2 { DEFAULT ->
+                      case GHC.Prim.tagToEnum# @ GHC.Types.Bool wild2 of wild3 {
+                        GHC.Types.False
+                        -> case w of ww { GHC.Types.F# ww1 -> Physics.Gravity.$wf ww1 w1 }
+                        GHC.Types.True -> 1.0# } }
+                   GHC.Types.True
+                   -> case Physics.Gravity.$s^1 ret_ty GHC.Prim.Float# of {} } }) -}
+0c15ce13ef95870d25504fbdce925286
+  $w$s^^ ::
+    Graphics.GL.Types.GLfloat
+    -> GHC.Integer.Type.Integer -> GHC.Prim.Float#
+  {- Arity: 2, Strictness: <L,U(U)><S,U>, Inline: [0],
+     Unfolding: (\ (w :: Graphics.GL.Types.GLfloat)
+                   (w1 :: GHC.Integer.Type.Integer) ->
+                 case GHC.Integer.Type.geInteger#
+                        w1
+                        Physics.Gravity.$s^2 of wild { DEFAULT ->
+                 case GHC.Prim.tagToEnum# @ GHC.Types.Bool wild of wild1 {
+                   GHC.Types.False
+                   -> case Physics.Gravity.$w$s^
+                             w
+                             (GHC.Integer.Type.negateInteger w1) of ww { DEFAULT ->
+                      GHC.Prim.divideFloat# 1.0# ww }
+                   GHC.Types.True -> Physics.Gravity.$w$s^ w w1 } }) -}
+acbc3b069ec653ad1e1a521503ab050f
+  $w$wxs ::
+    GHC.Prim.Int#
+    -> (# Graphics.GL.Types.GLfloat, [Graphics.GL.Types.GLfloat] #)
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U>, Inline: [0] -}
+8d021cd5f4832388aa6b90fa37a21f00
+  $w$wxs1 ::
+    GHC.Prim.Int#
+    -> (# Graphics.GL.Types.GLfloat, [Graphics.GL.Types.GLfloat] #)
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U>, Inline: [0] -}
+9e74a04051b14360a2bdda22738ce857
+  $w$wxs2 ::
+    GHC.Prim.Int#
+    -> (# Graphics.GL.Types.GLfloat, [Graphics.GL.Types.GLfloat] #)
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U>, Inline: [0] -}
+345ec23f9d6733d5e626d5fa37de2121
+  $wcForce ::
+    Graphics.GL.Types.GLfloat
+    -> Math.Vector.Vector Graphics.GL.Types.GLfloat
+    -> Math.Vector.Vector Graphics.GL.Types.GLfloat
+    -> Math.Vector.Vector Graphics.GL.Types.GLfloat
+    -> [Physics.Gravity.Body]
+    -> Math.Vector.Vector Graphics.GL.Types.GLfloat
+  {- Arity: 5, Strictness: <L,U(U)><L,U><L,U><L,U><S,U>,
+     Inline: [0] -}
+13c6900f32a48a58b4b9a369b039f594
+  $wcollidingWith ::
+    Graphics.GL.Types.GLfloat
+    -> Math.Vector.Vector Graphics.GL.Types.GLfloat
+    -> GHC.Prim.Float#
+    -> Math.Vector.Vector Graphics.GL.Types.GLfloat
+    -> GHC.Types.Bool
+  {- Arity: 4, Strictness: <L,1*U(U)><S,1*U><S,U><S,1*U>,
+     Inline: [0],
+     Unfolding: (\ (ww :: Graphics.GL.Types.GLfloat)
+                   (ww1 :: Math.Vector.Vector Graphics.GL.Types.GLfloat)
+                   (ww2 :: GHC.Prim.Float#)
+                   (ww3 :: Math.Vector.Vector Graphics.GL.Types.GLfloat) ->
+                 case ww1 of wild {
+                   DEFAULT -> Physics.Gravity.collidingWith1
+                   Math.Vector.Vector r1
+                   -> case ww3 of wild1 {
+                        DEFAULT -> Physics.Gravity.collidingWith1
+                        Math.Vector.Vector r2
+                        -> case r1 of wild2 {
+                             [] -> case GHC.List.badHead ret_ty GHC.Types.Bool of {}
+                             : x ds1
+                             -> case x of wild3 { GHC.Types.F# x1 ->
+                                case r2 of wild4 {
+                                  [] -> case GHC.List.badHead ret_ty GHC.Types.Bool of {}
+                                  : x2 ds2
+                                  -> case x2 of wild5 { GHC.Types.F# x3 ->
+                                     let {
+                                       y2 :: Graphics.GL.Types.GLfloat
+                                       = case ds2 of wild6 {
+                                           [] -> GHC.List.badHead @ Graphics.GL.Types.GLfloat
+                                           : x4 ds3 -> x4 }
+                                     } in
+                                     let {
+                                       y1 :: Graphics.GL.Types.GLfloat
+                                       = case ds1 of wild6 {
+                                           [] -> GHC.List.badHead @ Graphics.GL.Types.GLfloat
+                                           : x4 ds3 -> x4 }
+                                     } in
+                                     let {
+                                       $j :: GHC.Prim.Void# -> GHC.Types.Bool
+                                         {- Arity: 1, Strictness: <L,A> -}
+                                       = \ (w :: GHC.Prim.Void#)[OneShot] ->
+                                         case ww of wild6 { GHC.Types.F# x4 ->
+                                         case GHC.Prim.tagToEnum#
+                                                @ GHC.Types.Bool
+                                                (GHC.Prim.leFloat#
+                                                   x3
+                                                   (GHC.Prim.plusFloat#
+                                                      x1
+                                                      (GHC.Prim.timesFloat# x4 10.0#))) of wild7 {
+                                           GHC.Types.False -> GHC.Types.False
+                                           GHC.Types.True
+                                           -> case GHC.Prim.tagToEnum#
+                                                     @ GHC.Types.Bool
+                                                     (GHC.Prim.geFloat#
+                                                        x3
+                                                        (GHC.Prim.plusFloat#
+                                                           x1
+                                                           (GHC.Prim.timesFloat#
+                                                              x4
+                                                              10.0#))) of wild8 {
+                                                GHC.Types.False -> GHC.Types.False
+                                                GHC.Types.True
+                                                -> case y2 of wild9 { GHC.Types.F# x5 ->
+                                                   case y1 of wild10 { GHC.Types.F# x6 ->
+                                                   case GHC.Prim.tagToEnum#
+                                                          @ GHC.Types.Bool
+                                                          (GHC.Prim.leFloat#
+                                                             x5
+                                                             (GHC.Prim.plusFloat#
+                                                                x6
+                                                                (GHC.Prim.timesFloat#
+                                                                   x4
+                                                                   10.0#))) of wild11 {
+                                                     GHC.Types.False -> GHC.Types.False
+                                                     GHC.Types.True
+                                                     -> GHC.Prim.tagToEnum#
+                                                          @ GHC.Types.Bool
+                                                          (GHC.Prim.geFloat#
+                                                             x5
+                                                             (GHC.Prim.plusFloat#
+                                                                x6
+                                                                (GHC.Prim.timesFloat#
+                                                                   x4
+                                                                   10.0#))) } } } } } }
+                                     } in
+                                     case GHC.Prim.tagToEnum#
+                                            @ GHC.Types.Bool
+                                            (GHC.Prim.leFloat#
+                                               x1
+                                               (GHC.Prim.plusFloat#
+                                                  x3
+                                                  (GHC.Prim.timesFloat# ww2 10.0#))) of wild6 {
+                                       GHC.Types.False -> $j GHC.Prim.void#
+                                       GHC.Types.True
+                                       -> case GHC.Prim.tagToEnum#
+                                                 @ GHC.Types.Bool
+                                                 (GHC.Prim.geFloat#
+                                                    x1
+                                                    (GHC.Prim.plusFloat#
+                                                       x3
+                                                       (GHC.Prim.timesFloat# ww2 10.0#))) of wild7 {
+                                            GHC.Types.False -> $j GHC.Prim.void#
+                                            GHC.Types.True
+                                            -> case y1 of wild8 { GHC.Types.F# x4 ->
+                                               case y2 of wild9 { GHC.Types.F# x5 ->
+                                               case GHC.Prim.tagToEnum#
+                                                      @ GHC.Types.Bool
+                                                      (GHC.Prim.leFloat#
+                                                         x4
+                                                         (GHC.Prim.plusFloat#
+                                                            x5
+                                                            (GHC.Prim.timesFloat#
+                                                               ww2
+                                                               10.0#))) of wild10 {
+                                                 GHC.Types.False -> $j GHC.Prim.void#
+                                                 GHC.Types.True
+                                                 -> case GHC.Prim.tagToEnum#
+                                                           @ GHC.Types.Bool
+                                                           (GHC.Prim.geFloat#
+                                                              x4
+                                                              (GHC.Prim.plusFloat#
+                                                                 x5
+                                                                 (GHC.Prim.timesFloat#
+                                                                    ww2
+                                                                    10.0#))) of wild11 {
+                                                      GHC.Types.False -> $j GHC.Prim.void#
+                                                      GHC.Types.True
+                                                      -> GHC.Types.True } } } } } } } } } } } }) -}
+112ca99b9d712b9fb4140ac3405742f1
+  $wf ::
+    GHC.Prim.Float# -> GHC.Integer.Type.Integer -> GHC.Prim.Float#
+  {- Arity: 2, Strictness: <L,U><S,U>, Inline: [0] -}
+6972b5dc968e8bd3d1f24c3c0913f4a6
+  data Body
+    = Body {mass :: Graphics.GL.Types.GLfloat,
+            position :: Math.Vector.Vector Graphics.GL.Types.GLfloat,
+            velocity :: Math.Vector.Vector Graphics.GL.Types.GLfloat,
+            acceleration :: Math.Vector.Vector Graphics.GL.Types.GLfloat}
+560835d73be658141acaebd7d04e8adc
+  acceleration ::
+    Physics.Gravity.Body
+    -> Math.Vector.Vector Graphics.GL.Types.GLfloat
+  RecSel Left Physics.Gravity.Body
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(LLLS),1*U(A,A,A,1*U)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: Physics.Gravity.Body) ->
+                 case ds of wild { Physics.Gravity.Body ds1 ds2 ds3 ds4 -> ds4 }) -}
+6e50c8d7746f1ba5071b6bf307a52cf9
+  cAcceleration ::
+    Physics.Gravity.Body
+    -> [Physics.Gravity.Body]
+    -> Graphics.GL.Types.GLfloat
+    -> Physics.Gravity.Body
+  {- Arity: 3, Strictness: <S,1*U(U(U),U,U,U)><L,U><L,U>m,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (3, True, False)
+                (\ (w :: Physics.Gravity.Body)
+                   (w1 :: [Physics.Gravity.Body])
+                   (w2 :: Graphics.GL.Types.GLfloat) ->
+                 case w of ww { Physics.Gravity.Body ww1 ww2 ww3 ww4 ->
+                 Physics.Gravity.Body
+                   ww1
+                   ww2
+                   ww3
+                   (Math.Vector.$wscale
+                      @ Graphics.GL.Types.GLfloat
+                      GHC.Float.$fFractionalFloat
+                      (Math.Vector.$wscale
+                         @ Graphics.GL.Types.GLfloat
+                         GHC.Float.$fFractionalFloat
+                         (Physics.Gravity.$wcForce ww1 ww2 ww3 ww4 w1)
+                         (case ww1 of wild1 { GHC.Types.F# y ->
+                          case GHC.Prim.divideFloat# 1.0# y of wild2 { DEFAULT ->
+                          GHC.Types.F# wild2 } }))
+                      w2) }) -}
+5f1d48ffdc240333ddfc09c433e144df
+  cForce ::
+    Physics.Gravity.Body
+    -> [Physics.Gravity.Body]
+    -> Math.Vector.Vector Graphics.GL.Types.GLfloat
+  {- Arity: 2, Strictness: <S,1*U(U(U),U,U,U)><S,U>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, False)
+                (\ (w :: Physics.Gravity.Body) (w1 :: [Physics.Gravity.Body]) ->
+                 case w of ww { Physics.Gravity.Body ww1 ww2 ww3 ww4 ->
+                 Physics.Gravity.$wcForce ww1 ww2 ww3 ww4 w1 }) -}
+21a46f5713a1cae4a31c9f6289777612
+  cPosition :: Physics.Gravity.Body -> Physics.Gravity.Body
+  {- Arity: 1, Strictness: <S,1*U(U,1*U,U,U)>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: Physics.Gravity.Body) ->
+                 case ds of wild { Physics.Gravity.Body m r v a ->
+                 Physics.Gravity.Body
+                   m
+                   (Math.Vector.plus
+                      @ Graphics.GL.Types.GLfloat
+                      GHC.Float.$fNumFloat
+                      r
+                      v)
+                   v
+                   a }) -}
+069918f3d39711d3e8e3956185f4864b
+  cVelocity :: Physics.Gravity.Body -> Physics.Gravity.Body
+  {- Arity: 1, Strictness: <S,1*U(U,U,1*U,U)>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: Physics.Gravity.Body) ->
+                 case ds of wild { Physics.Gravity.Body m r v a ->
+                 Physics.Gravity.Body
+                   m
+                   r
+                   (Math.Vector.plus
+                      @ Graphics.GL.Types.GLfloat
+                      GHC.Float.$fNumFloat
+                      v
+                      a)
+                   a }) -}
+56e1317ea30c62619f3b15be2bea4435
+  collidingWith ::
+    Physics.Gravity.Body -> Physics.Gravity.Body -> GHC.Types.Bool
+  {- Arity: 2,
+     Strictness: <S(LSLL),1*U(1*U(U),1*U,A,A)><S(S(S)SLL),1*U(1*U(U),1*U,A,A)>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, False)
+                (\ (w :: Physics.Gravity.Body) (w1 :: Physics.Gravity.Body) ->
+                 case w of ww { Physics.Gravity.Body ww1 ww2 ww3 ww4 ->
+                 case w1 of ww5 { Physics.Gravity.Body ww6 ww7 ww8 ww9 ->
+                 case ww6 of ww10 { GHC.Types.F# ww11 ->
+                 Physics.Gravity.$wcollidingWith ww1 ww2 ww11 ww7 } } }) -}
+c56da98b8a28a5132640988b816c411d
+  collidingWith1 :: GHC.Types.Bool
+  {- Strictness: x -}
+037260feab1ca3296c6390a3c0881881
+  mass :: Physics.Gravity.Body -> Graphics.GL.Types.GLfloat
+  RecSel Left Physics.Gravity.Body
+  {- Arity: 1, HasNoCafRefs,
+     Strictness: <S(SLLL),1*U(1*U(U),A,A,A)>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: Physics.Gravity.Body) ->
+                 case ds of wild { Physics.Gravity.Body ds1 ds2 ds3 ds4 -> ds1 }) -}
+95e8982780cd59491f7193a8c780c8a0
+  position ::
+    Physics.Gravity.Body
+    -> Math.Vector.Vector Graphics.GL.Types.GLfloat
+  RecSel Left Physics.Gravity.Body
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(LSLL),1*U(A,1*U,A,A)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: Physics.Gravity.Body) ->
+                 case ds of wild { Physics.Gravity.Body ds1 ds2 ds3 ds4 -> ds2 }) -}
+1a3aa9db5df0d88a6f384e7d2fc12a07
+  updateBodies ::
+    Graphics.GL.Types.GLfloat
+    -> [Physics.Gravity.Body] -> [Physics.Gravity.Body]
+  {- Arity: 2, Strictness: <L,U><S,1*U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (ds :: Graphics.GL.Types.GLfloat)
+                   (ds1 :: [Physics.Gravity.Body]) ->
+                 case ds1 of wild {
+                   [] -> GHC.Types.[] @ Physics.Gravity.Body
+                   : ipv ipv1
+                   -> Physics.Gravity.updateBodies_$supdateBodies'
+                        ds
+                        wild
+                        ipv
+                        ipv1 }) -}
+2cd3a19cda7086128368cdb895ccfcf8
+  updateBodies_$supdateBodies' ::
+    GHC.Types.Float
+    -> [Physics.Gravity.Body]
+    -> Physics.Gravity.Body
+    -> [Physics.Gravity.Body]
+    -> [Physics.Gravity.Body]
+  {- Arity: 4, Strictness: <L,U><L,U><L,U><L,U> -}
+7ecfb1db7d4d9daea2cf9226a0d705ab
+  velocity ::
+    Physics.Gravity.Body
+    -> Math.Vector.Vector Graphics.GL.Types.GLfloat
+  RecSel Left Physics.Gravity.Body
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(LLSL),1*U(A,A,1*U,A)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: Physics.Gravity.Body) ->
+                 case ds of wild { Physics.Gravity.Body ds1 ds2 ds3 ds4 -> ds3 }) -}
+3ad76553fdf3d07604a51d8fe3d9ea5e
+  zeroBody :: Physics.Gravity.Body
+  {- Strictness: m,
+     Unfolding: (Physics.Gravity.Body
+                   Physics.Gravity.zeroBody_x
+                   Physics.Gravity.zeroBody3
+                   Physics.Gravity.zeroBody2
+                   Physics.Gravity.zeroBody1) -}
+499d3d2ca5fd6fae62ebe7f015b88985
+  zeroBody1 :: Math.Vector.Vector Graphics.GL.Types.GLfloat
+  {- Strictness: m1,
+     Unfolding: (Math.Vector.Vector
+                   @ Graphics.GL.Types.GLfloat
+                   Physics.Gravity.zeroBody_ww1) -}
+fad7b466d81a25ea0c1374b11f1fe103
+  zeroBody2 :: Math.Vector.Vector Graphics.GL.Types.GLfloat
+  {- Strictness: m1,
+     Unfolding: (Math.Vector.Vector
+                   @ Graphics.GL.Types.GLfloat
+                   Physics.Gravity.zeroBody_ww2) -}
+f0452f8e556cb647052da529c926c122
+  zeroBody3 :: Math.Vector.Vector Graphics.GL.Types.GLfloat
+  {- Strictness: m1,
+     Unfolding: (Math.Vector.Vector
+                   @ Graphics.GL.Types.GLfloat
+                   Physics.Gravity.zeroBody_ww3) -}
+5a6b39308a39911b9d1b0c20c8229611
+  zeroBody_ww1 :: [Graphics.GL.Types.GLfloat]
+  {- Unfolding: (case Physics.Gravity.$w$wxs
+                        3# of ww { (#,#) ww1 ww2 ->
+                 GHC.Types.: @ Graphics.GL.Types.GLfloat ww1 ww2 }) -}
+2dc92668651a2b67618f162dc0de0013
+  zeroBody_ww2 :: [Graphics.GL.Types.GLfloat]
+  {- Unfolding: (case Physics.Gravity.$w$wxs1
+                        3# of ww { (#,#) ww1 ww2 ->
+                 GHC.Types.: @ Graphics.GL.Types.GLfloat ww1 ww2 }) -}
+062e83b2edff56785d8edac8eec5a4b3
+  zeroBody_ww3 :: [Graphics.GL.Types.GLfloat]
+  {- Unfolding: (case Physics.Gravity.$w$wxs2
+                        3# of ww { (#,#) ww1 ww2 ->
+                 GHC.Types.: @ Graphics.GL.Types.GLfloat ww1 ww2 }) -}
+48289621a84624d658cb0c06995fef82
+  zeroBody_x :: Graphics.GL.Types.GLfloat
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.F# 0.0#) -}
+instance GHC.Classes.Eq [Physics.Gravity.Body]
+  = Physics.Gravity.$fEqBody
+instance GHC.Show.Show [Physics.Gravity.Body]
+  = Physics.Gravity.$fShowBody
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: none
+require own pkg trusted: False
+

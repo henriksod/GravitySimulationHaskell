@@ -1,0 +1,151 @@
+
+==================== FINAL INTERFACE ====================
+2017-06-02 08:42:15.7725335 UTC
+
+interface main@main:Cube 8002
+  interface hash: 239588805e463fc5b340e13148d11f1a
+  ABI hash: 447ed760bf451a58404c77de26229285
+  export-list hash: 1d601fa7da0cad7b384578647c98245e
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: 261f115e14f73dd6f15249b879614e80
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Cube.cube
+  Cube.vertex3f
+module dependencies:
+package dependencies: GLURaw-2.0.0.3@GLURaw-2.0.0.3-G12M6COyQIU5WfRlrIwPuj
+                      GLUT-2.7.0.12@GLUT-2.7.0.12-2MhssjvTvsoEqaoGvdwU4F
+                      ObjectName-1.1.0.1@ObjectName-1.1.0.1-EiFOWjUQWWuLyOhtrmuIWX
+                      OpenGL-3.0.2.0@OpenGL-3.0.2.0-4NExFyKSCLV2QLQh5nNNh9
+                      OpenGLRaw-3.2.4.0@OpenGLRaw-3.2.4.0-JDyGgOXR61GG549SwmWm2Q
+                      StateVar-1.1.0.4@StateVar-1.1.0.4-5dJbnTVECtEAhfJXPZKdbO
+                      array-0.5.1.1@array-0.5.1.1 base-4.9.1.0
+                      binary-0.8.3.0@binary-0.8.3.0
+                      bytestring-0.10.8.1@bytestring-0.10.8.1
+                      containers-0.5.7.1@containers-0.5.7.1
+                      deepseq-1.4.2.0@deepseq-1.4.2.0
+                      fixed-0.2.1.1@fixed-0.2.1.1-8Jr82l0kss5Gr4nEevmXlZ ghc-prim-0.5.0.0
+                      half-0.2.2.3@half-0.2.2.3-GHJ372Ls7FBA3PAGtGHfOR
+                      integer-gmp-1.0.0.1 stm-2.4.4.1@stm-2.4.4.1-JQn4hNPyYjP5m9AcbI88Ve
+                      text-1.2.2.1@text-1.2.2.1-Ji7hMs2U4BkBwavd4taEVR
+orphans: base-4.9.1.0:GHC.Base base-4.9.1.0:GHC.Float
+         binary-0.8.3.0@binary-0.8.3.0:Data.Binary.Generic
+         bytestring-0.10.8.1@bytestring-0.10.8.1:Data.ByteString.Builder
+         stm-2.4.4.1@stm-2.4.4.1-JQn4hNPyYjP5m9AcbI88Ve:Control.Monad.STM
+         text-1.2.2.1@text-1.2.2.1-Ji7hMs2U4BkBwavd4taEVR:Data.Text
+         text-1.2.2.1@text-1.2.2.1-Ji7hMs2U4BkBwavd4taEVR:Data.Text.Show
+family instance modules: base-4.9.1.0:Control.Applicative
+                         base-4.9.1.0:Data.Complex base-4.9.1.0:Data.Either
+                         base-4.9.1.0:Data.Functor.Const base-4.9.1.0:Data.Functor.Identity
+                         base-4.9.1.0:Data.List.NonEmpty base-4.9.1.0:Data.Monoid
+                         base-4.9.1.0:Data.Semigroup base-4.9.1.0:Data.Type.Equality
+                         base-4.9.1.0:Data.Version base-4.9.1.0:Data.Void
+                         base-4.9.1.0:GHC.Exts base-4.9.1.0:GHC.Generics
+                         base-4.9.1.0:GHC.IO.Exception base-4.9.1.0:GHC.TypeLits
+                         containers-0.5.7.1@containers-0.5.7.1:Data.IntMap.Base
+                         containers-0.5.7.1@containers-0.5.7.1:Data.IntSet.Base
+                         containers-0.5.7.1@containers-0.5.7.1:Data.Map.Base
+                         containers-0.5.7.1@containers-0.5.7.1:Data.Sequence
+                         containers-0.5.7.1@containers-0.5.7.1:Data.Set.Base
+                         text-1.2.2.1@text-1.2.2.1-Ji7hMs2U4BkBwavd4taEVR:Data.Text
+import  -/  GLUT-2.7.0.12@GLUT-2.7.0.12-2MhssjvTvsoEqaoGvdwU4F:Graphics.UI.GLUT 739277ef0ec51991551b963ff25b5bd3
+import  -/  OpenGL-3.0.2.0@OpenGL-3.0.2.0-4NExFyKSCLV2QLQh5nNNh9:Graphics.Rendering.OpenGL.GL.BeginEnd 7e42477b642f993e2467c039959127e3
+import  -/  OpenGL-3.0.2.0@OpenGL-3.0.2.0-4NExFyKSCLV2QLQh5nNNh9:Graphics.Rendering.OpenGL.GL.PrimitiveMode c55a576bb852bc0519e2e04c8217d5a3
+import  -/  OpenGL-3.0.2.0@OpenGL-3.0.2.0-4NExFyKSCLV2QLQh5nNNh9:Graphics.Rendering.OpenGL.GL.Tensor 359aad404c968ff6e188bdc1cef6a579
+import  -/  OpenGL-3.0.2.0@OpenGL-3.0.2.0-4NExFyKSCLV2QLQh5nNNh9:Graphics.Rendering.OpenGL.GL.VertexSpec a52da1b41567a3e44e31e9577e14bdb8
+import  -/  OpenGLRaw-3.2.4.0@OpenGLRaw-3.2.4.0-JDyGgOXR61GG549SwmWm2Q:Graphics.GL.Types c6427027ca04c13c172d159d696662ed
+import  -/  base-4.9.1.0:Data.Foldable 254e836c2d813d34e47feb29bb8d40ed
+import  -/  base-4.9.1.0:Prelude 74b3e204395920329f6de9d97206abe9
+import  -/  ghc-prim-0.5.0.0:GHC.Types 89f8de4f08018c9177c98d979eae0e45
+114fff7820849dcdae06880e4639d1ea
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module Cube.$trModule2 Cube.$trModule1) -}
+241ac30263ca3d26af5b94dbb9f14114
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "Cube"#) -}
+3e6011c26bac2e39f706a57039eee5c8
+  $trModule2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "main"#) -}
+081839aaa4487540bf42f2cadb40ac6e
+  $wvertex3f ::
+    GHC.Prim.Float#
+    -> GHC.Prim.Float#
+    -> GHC.Prim.Float#
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 4, Strictness: <S,U><S,U><S,U><S,U>, Inline: [0],
+     Unfolding: (\ (ww :: GHC.Prim.Float#)
+                   (ww1 :: GHC.Prim.Float#)
+                   (ww2 :: GHC.Prim.Float#)
+                   (w :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case Graphics.GL.Functions.F28.ptr_glVertex3f of ds4 { GHC.Ptr.FunPtr ds5 ->
+                 case {__dyn_ccall_GC "" GHC.Prim.Addr#
+                                         -> GHC.Prim.Float#
+                                         -> GHC.Prim.Float#
+                                         -> GHC.Prim.Float#
+                                         -> GHC.Prim.State# GHC.Prim.RealWorld
+                                         -> (# GHC.Prim.State# GHC.Prim.RealWorld #)}
+                        ds5
+                        ww
+                        ww1
+                        ww2
+                        w of wild { Unit# ds12 ->
+                 (# ds12, GHC.Tuple.() #) } }) -}
+a9d5a8090452af41f58e01356ae62286
+  cube :: Graphics.GL.Types.GLfloat -> GHC.Types.IO ()
+  {- Arity: 2, Strictness: <L,U(U)><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Cube.cube1
+                  `cast`
+                (<Graphics.GL.Types.GLfloat>_R
+                 ->_R Sym (GHC.Types.N:IO[0] <()>_R)) -}
+1d80fe8d7d8aa75f1b1bca431959d717
+  cube1 ::
+    Graphics.GL.Types.GLfloat
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 2, Strictness: <L,U(U)><S,U> -}
+f8d3d4a317ba60480026c78a2bc0aa94
+  vertex3f ::
+    (Graphics.GL.Types.GLfloat, Graphics.GL.Types.GLfloat,
+     Graphics.GL.Types.GLfloat)
+    -> GHC.Types.IO ()
+  {- Arity: 2,
+     Strictness: <S(S(S)S(S)S(S)),1*U(1*U(U),1*U(U),1*U(U))><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Cube.vertex3f1
+                  `cast`
+                (<(Graphics.GL.Types.GLfloat, Graphics.GL.Types.GLfloat,
+                   Graphics.GL.Types.GLfloat)>_R
+                 ->_R Sym (GHC.Types.N:IO[0] <()>_R)) -}
+c7831af67b9fa55c5ddb619b174957db
+  vertex3f1 ::
+    (Graphics.GL.Types.GLfloat, Graphics.GL.Types.GLfloat,
+     Graphics.GL.Types.GLfloat)
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 2,
+     Strictness: <S(S(S)S(S)S(S)),1*U(1*U(U),1*U(U),1*U(U))><S,U>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, False)
+                (\ (w :: (Graphics.GL.Types.GLfloat, Graphics.GL.Types.GLfloat,
+                          Graphics.GL.Types.GLfloat))
+                   (w1 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case w of ww { (,,) ww1 ww2 ww3 ->
+                 case ww1 of ww4 { GHC.Types.F# ww5 ->
+                 case ww2 of ww6 { GHC.Types.F# ww7 ->
+                 case ww3 of ww8 { GHC.Types.F# ww9 ->
+                 Cube.$wvertex3f ww5 ww7 ww9 w1 } } } }) -}
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: none
+require own pkg trusted: False
+

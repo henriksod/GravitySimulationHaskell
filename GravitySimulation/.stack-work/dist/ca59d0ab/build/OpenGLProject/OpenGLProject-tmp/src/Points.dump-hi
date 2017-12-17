@@ -1,0 +1,139 @@
+
+==================== FINAL INTERFACE ====================
+2017-06-02 09:33:53.4241028 UTC
+
+interface main@main:Points 8002
+  interface hash: de7d396d725f7eb6a1eb29373028b18c
+  ABI hash: 96ae174c4b0fa6d108ce09e96923370c
+  export-list hash: fe0f568341eebfdfb939a664c390ffc6
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: 261f115e14f73dd6f15249b879614e80
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Points.points
+module dependencies:
+package dependencies: GLURaw-2.0.0.3@GLURaw-2.0.0.3-G12M6COyQIU5WfRlrIwPuj
+                      ObjectName-1.1.0.1@ObjectName-1.1.0.1-EiFOWjUQWWuLyOhtrmuIWX
+                      OpenGL-3.0.2.0@OpenGL-3.0.2.0-4NExFyKSCLV2QLQh5nNNh9
+                      OpenGLRaw-3.2.4.0@OpenGLRaw-3.2.4.0-JDyGgOXR61GG549SwmWm2Q
+                      StateVar-1.1.0.4@StateVar-1.1.0.4-5dJbnTVECtEAhfJXPZKdbO
+                      array-0.5.1.1@array-0.5.1.1 base-4.9.1.0
+                      binary-0.8.3.0@binary-0.8.3.0
+                      bytestring-0.10.8.1@bytestring-0.10.8.1
+                      containers-0.5.7.1@containers-0.5.7.1
+                      deepseq-1.4.2.0@deepseq-1.4.2.0
+                      fixed-0.2.1.1@fixed-0.2.1.1-8Jr82l0kss5Gr4nEevmXlZ ghc-prim-0.5.0.0
+                      half-0.2.2.3@half-0.2.2.3-GHJ372Ls7FBA3PAGtGHfOR
+                      integer-gmp-1.0.0.1 stm-2.4.4.1@stm-2.4.4.1-JQn4hNPyYjP5m9AcbI88Ve
+                      text-1.2.2.1@text-1.2.2.1-Ji7hMs2U4BkBwavd4taEVR
+orphans: base-4.9.1.0:GHC.Base base-4.9.1.0:GHC.Float
+         binary-0.8.3.0@binary-0.8.3.0:Data.Binary.Generic
+         bytestring-0.10.8.1@bytestring-0.10.8.1:Data.ByteString.Builder
+         stm-2.4.4.1@stm-2.4.4.1-JQn4hNPyYjP5m9AcbI88Ve:Control.Monad.STM
+         text-1.2.2.1@text-1.2.2.1-Ji7hMs2U4BkBwavd4taEVR:Data.Text
+         text-1.2.2.1@text-1.2.2.1-Ji7hMs2U4BkBwavd4taEVR:Data.Text.Show
+family instance modules: base-4.9.1.0:Control.Applicative
+                         base-4.9.1.0:Data.Complex base-4.9.1.0:Data.Either
+                         base-4.9.1.0:Data.Functor.Const base-4.9.1.0:Data.Functor.Identity
+                         base-4.9.1.0:Data.List.NonEmpty base-4.9.1.0:Data.Monoid
+                         base-4.9.1.0:Data.Semigroup base-4.9.1.0:Data.Type.Equality
+                         base-4.9.1.0:Data.Version base-4.9.1.0:Data.Void
+                         base-4.9.1.0:GHC.Exts base-4.9.1.0:GHC.Generics
+                         base-4.9.1.0:GHC.IO.Exception base-4.9.1.0:GHC.TypeLits
+                         containers-0.5.7.1@containers-0.5.7.1:Data.IntMap.Base
+                         containers-0.5.7.1@containers-0.5.7.1:Data.IntSet.Base
+                         containers-0.5.7.1@containers-0.5.7.1:Data.Map.Base
+                         containers-0.5.7.1@containers-0.5.7.1:Data.Sequence
+                         containers-0.5.7.1@containers-0.5.7.1:Data.Set.Base
+                         text-1.2.2.1@text-1.2.2.1-Ji7hMs2U4BkBwavd4taEVR:Data.Text
+import  -/  OpenGL-3.0.2.0@OpenGL-3.0.2.0-4NExFyKSCLV2QLQh5nNNh9:Graphics.Rendering.OpenGL dd4d19a8c8a184ce3a2259b165ee5281
+import  -/  OpenGLRaw-3.2.4.0@OpenGLRaw-3.2.4.0-JDyGgOXR61GG549SwmWm2Q:Graphics.GL.Types c6427027ca04c13c172d159d696662ed
+import  -/  base-4.9.1.0:GHC.Float b620368aab866c2bb9d3a0a459566b84
+import  -/  base-4.9.1.0:GHC.Num 38b8aac8807c096c7f3ca3c1eff02939
+import  -/  base-4.9.1.0:GHC.Real b88ae4a48c079652623073a5bbf5c9b0
+import  -/  base-4.9.1.0:Prelude 74b3e204395920329f6de9d97206abe9
+1758053c108440f18d3e05acfa835101
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module
+                   Points.$trModule2
+                   Points.$trModule1) -}
+124d4181f4278ad94ff583cef809a022
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "Points"#) -}
+2dd4039b534a26fe4ae4d6b1f4d35a1a
+  $trModule2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "main"#) -}
+f4e92f212eb1fec5eb7eb4a42fd6a32a
+  points ::
+    Graphics.GL.Types.GLfloat
+    -> GHC.Types.Int
+    -> [(Graphics.GL.Types.GLfloat, Graphics.GL.Types.GLfloat,
+         Graphics.GL.Types.GLfloat)]
+  {- Arity: 2, Strictness: <L,U(U)><L,1*U(U)>,
+     Unfolding: (\ (a :: Graphics.GL.Types.GLfloat)
+                   (n :: GHC.Types.Int) ->
+                 let {
+                   n' :: Graphics.GL.Types.GLfloat
+                   = case n of wild { GHC.Types.I# i ->
+                     GHC.Types.F# (GHC.Prim.int2Float# i) }
+                 } in
+                 letrec {
+                   go :: [Graphics.GL.Types.GLfloat]
+                         -> [(Graphics.GL.Types.GLfloat, Graphics.GL.Types.GLfloat,
+                              Graphics.GL.Types.GLfloat)]
+                     {- Arity: 1, Strictness: <S,1*U> -}
+                   = \ (ds :: [Graphics.GL.Types.GLfloat]) ->
+                     case ds of wild {
+                       []
+                       -> GHC.Types.[]
+                            @ (Graphics.GL.Types.GLfloat, Graphics.GL.Types.GLfloat,
+                               Graphics.GL.Types.GLfloat)
+                       : y ys
+                       -> GHC.Types.:
+                            @ (Graphics.GL.Types.GLfloat, Graphics.GL.Types.GLfloat,
+                               Graphics.GL.Types.GLfloat)
+                            (case a of wild1 { GHC.Types.F# x ->
+                             case y of wild2 { GHC.Types.F# y1 ->
+                             case n' of wild3 { GHC.Types.F# y2 ->
+                             case GHC.Prim.divideFloat#
+                                    (GHC.Prim.timesFloat# 6.2831855# y1)
+                                    y2 of wild4 { DEFAULT ->
+                             GHC.Types.F#
+                               (GHC.Prim.timesFloat# x (GHC.Prim.sinFloat# wild4)) } } } },
+                             case a of wild1 { GHC.Types.F# x ->
+                             case y of wild2 { GHC.Types.F# y1 ->
+                             case n' of wild3 { GHC.Types.F# y2 ->
+                             case GHC.Prim.divideFloat#
+                                    (GHC.Prim.timesFloat# 6.2831855# y1)
+                                    y2 of wild4 { DEFAULT ->
+                             GHC.Types.F#
+                               (GHC.Prim.timesFloat# x (GHC.Prim.cosFloat# wild4)) } } } },
+                             Points.points2)
+                            (go ys) }
+                 } in
+                 go
+                   (GHC.Real.numericEnumFromTo
+                      @ GHC.Types.Float
+                      GHC.Classes.$fOrdFloat
+                      GHC.Float.$fFractionalFloat
+                      Points.points1
+                      n')) -}
+68d730bb6216bda0354c4a198ab2c7b6
+  points1 :: GHC.Types.Float
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.F# 1.0#) -}
+c73d908aef594a97dc4b8b5f21716743
+  points2 :: GHC.Types.Float
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.F# 0.0#) -}
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: none
+require own pkg trusted: False
+

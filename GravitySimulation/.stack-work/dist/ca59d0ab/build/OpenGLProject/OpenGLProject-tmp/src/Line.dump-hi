@@ -1,0 +1,325 @@
+
+==================== FINAL INTERFACE ====================
+2017-06-02 08:55:20.1569337 UTC
+
+interface main@main:Line 8002
+  interface hash: 9c5c6c9cc97d6cf25cec9d700742830e
+  ABI hash: 94dbf4e10a2901025b14008e649d3bf5
+  export-list hash: 7d293a94873e48a051259a8c5faee21c
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: 261f115e14f73dd6f15249b879614e80
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Line.line
+  Line.vertex3f
+module dependencies:
+package dependencies: GLURaw-2.0.0.3@GLURaw-2.0.0.3-G12M6COyQIU5WfRlrIwPuj
+                      GLUT-2.7.0.12@GLUT-2.7.0.12-2MhssjvTvsoEqaoGvdwU4F
+                      ObjectName-1.1.0.1@ObjectName-1.1.0.1-EiFOWjUQWWuLyOhtrmuIWX
+                      OpenGL-3.0.2.0@OpenGL-3.0.2.0-4NExFyKSCLV2QLQh5nNNh9
+                      OpenGLRaw-3.2.4.0@OpenGLRaw-3.2.4.0-JDyGgOXR61GG549SwmWm2Q
+                      StateVar-1.1.0.4@StateVar-1.1.0.4-5dJbnTVECtEAhfJXPZKdbO
+                      array-0.5.1.1@array-0.5.1.1 base-4.9.1.0
+                      binary-0.8.3.0@binary-0.8.3.0
+                      bytestring-0.10.8.1@bytestring-0.10.8.1
+                      containers-0.5.7.1@containers-0.5.7.1
+                      deepseq-1.4.2.0@deepseq-1.4.2.0
+                      fixed-0.2.1.1@fixed-0.2.1.1-8Jr82l0kss5Gr4nEevmXlZ ghc-prim-0.5.0.0
+                      half-0.2.2.3@half-0.2.2.3-GHJ372Ls7FBA3PAGtGHfOR
+                      integer-gmp-1.0.0.1 stm-2.4.4.1@stm-2.4.4.1-JQn4hNPyYjP5m9AcbI88Ve
+                      text-1.2.2.1@text-1.2.2.1-Ji7hMs2U4BkBwavd4taEVR
+orphans: base-4.9.1.0:GHC.Base base-4.9.1.0:GHC.Float
+         binary-0.8.3.0@binary-0.8.3.0:Data.Binary.Generic
+         bytestring-0.10.8.1@bytestring-0.10.8.1:Data.ByteString.Builder
+         stm-2.4.4.1@stm-2.4.4.1-JQn4hNPyYjP5m9AcbI88Ve:Control.Monad.STM
+         text-1.2.2.1@text-1.2.2.1-Ji7hMs2U4BkBwavd4taEVR:Data.Text
+         text-1.2.2.1@text-1.2.2.1-Ji7hMs2U4BkBwavd4taEVR:Data.Text.Show
+family instance modules: base-4.9.1.0:Control.Applicative
+                         base-4.9.1.0:Data.Complex base-4.9.1.0:Data.Either
+                         base-4.9.1.0:Data.Functor.Const base-4.9.1.0:Data.Functor.Identity
+                         base-4.9.1.0:Data.List.NonEmpty base-4.9.1.0:Data.Monoid
+                         base-4.9.1.0:Data.Semigroup base-4.9.1.0:Data.Type.Equality
+                         base-4.9.1.0:Data.Version base-4.9.1.0:Data.Void
+                         base-4.9.1.0:GHC.Exts base-4.9.1.0:GHC.Generics
+                         base-4.9.1.0:GHC.IO.Exception base-4.9.1.0:GHC.TypeLits
+                         containers-0.5.7.1@containers-0.5.7.1:Data.IntMap.Base
+                         containers-0.5.7.1@containers-0.5.7.1:Data.IntSet.Base
+                         containers-0.5.7.1@containers-0.5.7.1:Data.Map.Base
+                         containers-0.5.7.1@containers-0.5.7.1:Data.Sequence
+                         containers-0.5.7.1@containers-0.5.7.1:Data.Set.Base
+                         text-1.2.2.1@text-1.2.2.1-Ji7hMs2U4BkBwavd4taEVR:Data.Text
+import  -/  GLUT-2.7.0.12@GLUT-2.7.0.12-2MhssjvTvsoEqaoGvdwU4F:Graphics.UI.GLUT 739277ef0ec51991551b963ff25b5bd3
+import  -/  OpenGL-3.0.2.0@OpenGL-3.0.2.0-4NExFyKSCLV2QLQh5nNNh9:Graphics.Rendering.OpenGL.GL.BeginEnd 7e42477b642f993e2467c039959127e3
+import  -/  OpenGL-3.0.2.0@OpenGL-3.0.2.0-4NExFyKSCLV2QLQh5nNNh9:Graphics.Rendering.OpenGL.GL.PrimitiveMode c55a576bb852bc0519e2e04c8217d5a3
+import  -/  OpenGL-3.0.2.0@OpenGL-3.0.2.0-4NExFyKSCLV2QLQh5nNNh9:Graphics.Rendering.OpenGL.GL.Tensor 359aad404c968ff6e188bdc1cef6a579
+import  -/  OpenGL-3.0.2.0@OpenGL-3.0.2.0-4NExFyKSCLV2QLQh5nNNh9:Graphics.Rendering.OpenGL.GL.VertexSpec a52da1b41567a3e44e31e9577e14bdb8
+import  -/  OpenGLRaw-3.2.4.0@OpenGLRaw-3.2.4.0-JDyGgOXR61GG549SwmWm2Q:Graphics.GL.Types c6427027ca04c13c172d159d696662ed
+import  -/  base-4.9.1.0:Prelude 74b3e204395920329f6de9d97206abe9
+import  -/  ghc-prim-0.5.0.0:GHC.Types 89f8de4f08018c9177c98d979eae0e45
+63c4e20acd5807818b8584c23e85ee53
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module Line.$trModule2 Line.$trModule1) -}
+158cb220ce9864c0c17348f745e8725e
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "Line"#) -}
+0ccd83b8c7865154a16ae59108ec6a6f
+  $trModule2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "main"#) -}
+71784cfb652de3d133051e7157f51293
+  $wline ::
+    Graphics.GL.Types.GLfloat
+    -> Graphics.GL.Types.GLfloat
+    -> Graphics.GL.Types.GLfloat
+    -> Graphics.GL.Types.GLfloat
+    -> Graphics.GL.Types.GLfloat
+    -> Graphics.GL.Types.GLfloat
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 7,
+     Strictness: <L,U(U)><L,U(U)><L,U(U)><L,U(U)><L,U(U)><L,U(U)><S,U>,
+     Inline: [0],
+     Unfolding: (\ (ww :: Graphics.GL.Types.GLfloat)
+                   (ww1 :: Graphics.GL.Types.GLfloat)
+                   (ww2 :: Graphics.GL.Types.GLfloat)
+                   (ww3 :: Graphics.GL.Types.GLfloat)
+                   (ww4 :: Graphics.GL.Types.GLfloat)
+                   (ww5 :: Graphics.GL.Types.GLfloat)
+                   (w :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case GHC.Prim.getMaskingState# w of ds { (#,#) ipv ipv1 ->
+                 let {
+                   thing :: GHC.Prim.State# GHC.Prim.RealWorld
+                            -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+                     {- Arity: 1, Strictness: <S,U> -}
+                   = \ (s :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                     case ww of dt { GHC.Types.F# ipv2 ->
+                     case ww1 of dt1 { GHC.Types.F# ipv3 ->
+                     case ww2 of dt2 { GHC.Types.F# ipv4 ->
+                     case Graphics.GL.Functions.F28.ptr_glVertex3f of ds4 { GHC.Ptr.FunPtr ds5 ->
+                     case {__dyn_ccall_GC "" GHC.Prim.Addr#
+                                             -> GHC.Prim.Float#
+                                             -> GHC.Prim.Float#
+                                             -> GHC.Prim.Float#
+                                             -> GHC.Prim.State# GHC.Prim.RealWorld
+                                             -> (# GHC.Prim.State# GHC.Prim.RealWorld #)}
+                            ds5
+                            ipv2
+                            ipv3
+                            ipv4
+                            s of wild { Unit# ds12 ->
+                     case ww3 of dt3 { GHC.Types.F# ipv5 ->
+                     case ww4 of dt4 { GHC.Types.F# ipv6 ->
+                     case ww5 of dt5 { GHC.Types.F# ipv7 ->
+                     case {__dyn_ccall_GC "" GHC.Prim.Addr#
+                                             -> GHC.Prim.Float#
+                                             -> GHC.Prim.Float#
+                                             -> GHC.Prim.Float#
+                                             -> GHC.Prim.State# GHC.Prim.RealWorld
+                                             -> (# GHC.Prim.State# GHC.Prim.RealWorld #)}
+                            ds5
+                            ipv5
+                            ipv6
+                            ipv7
+                            ds12 of wild1 { Unit# ds1 ->
+                     (# ds1, GHC.Tuple.() #) } } } } } } } } }
+                 } in
+                 case ipv1 of ds1 {
+                   DEFAULT
+                   -> case Graphics.GL.Functions.F01.ptr_glBegin of ds2 { GHC.Ptr.FunPtr ds3 ->
+                      case {__dyn_ccall_GC "" GHC.Prim.Addr#
+                                              -> GHC.Prim.Word#
+                                              -> GHC.Prim.State# GHC.Prim.RealWorld
+                                              -> (# GHC.Prim.State# GHC.Prim.RealWorld #)}
+                             ds3
+                             1##
+                             ipv of wild { Unit# ds6 ->
+                      case GHC.Prim.catch#
+                             @ ()
+                             @ GHC.Exception.SomeException
+                             (GHC.Magic.lazy
+                                @ (GHC.Types.IO ())
+                                (GHC.Prim.maskAsyncExceptions# @ () thing)
+                                  `cast`
+                                (Sym (GHC.Types.N:IO[0] <()>_R)))
+                               `cast`
+                             (GHC.Types.N:IO[0] <()>_R)
+                             Line.line2
+                             ds6 of ds4 { (#,#) ipv4 ipv5 ->
+                      case Graphics.GL.Functions.F07.ptr_glEnd of ds5 { GHC.Ptr.FunPtr ds7 ->
+                      case {__dyn_ccall_GC "" GHC.Prim.Addr#
+                                              -> GHC.Prim.State# GHC.Prim.RealWorld
+                                              -> (# GHC.Prim.State# GHC.Prim.RealWorld #)}
+                             ds7
+                             ipv4 of wild1 { Unit# ds8 ->
+                      (# ds8, ipv5 #) } } } } }
+                   0#
+                   -> GHC.Prim.maskAsyncExceptions#
+                        @ ()
+                        (\ (eta1 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                         case Graphics.GL.Functions.F01.ptr_glBegin of ds2 { GHC.Ptr.FunPtr ds3 ->
+                         case {__dyn_ccall_GC "" GHC.Prim.Addr#
+                                                 -> GHC.Prim.Word#
+                                                 -> GHC.Prim.State# GHC.Prim.RealWorld
+                                                 -> (# GHC.Prim.State# GHC.Prim.RealWorld #)}
+                                ds3
+                                1##
+                                eta1 of wild { Unit# ds6 ->
+                         case GHC.Prim.catch#
+                                @ ()
+                                @ GHC.Exception.SomeException
+                                (GHC.Magic.lazy
+                                   @ (GHC.Types.IO ())
+                                   (GHC.Prim.unmaskAsyncExceptions# @ () thing)
+                                     `cast`
+                                   (Sym (GHC.Types.N:IO[0] <()>_R)))
+                                  `cast`
+                                (GHC.Types.N:IO[0] <()>_R)
+                                Line.line2
+                                ds6 of ds4 { (#,#) ipv4 ipv5 ->
+                         case Graphics.GL.Functions.F07.ptr_glEnd of ds5 { GHC.Ptr.FunPtr ds7 ->
+                         case {__dyn_ccall_GC "" GHC.Prim.Addr#
+                                                 -> GHC.Prim.State# GHC.Prim.RealWorld
+                                                 -> (# GHC.Prim.State# GHC.Prim.RealWorld #)}
+                                ds7
+                                ipv4 of wild1 { Unit# ds8 ->
+                         (# ds8, ipv5 #) } } } } })
+                        ipv
+                   1#
+                   -> case Graphics.GL.Functions.F01.ptr_glBegin of ds2 { GHC.Ptr.FunPtr ds3 ->
+                      case {__dyn_ccall_GC "" GHC.Prim.Addr#
+                                              -> GHC.Prim.Word#
+                                              -> GHC.Prim.State# GHC.Prim.RealWorld
+                                              -> (# GHC.Prim.State# GHC.Prim.RealWorld #)}
+                             ds3
+                             1##
+                             ipv of wild { Unit# ds6 ->
+                      case GHC.Prim.catch#
+                             @ ()
+                             @ GHC.Exception.SomeException
+                             (GHC.Magic.lazy
+                                @ (GHC.Types.IO ())
+                                (GHC.Prim.maskUninterruptible# @ () thing)
+                                  `cast`
+                                (Sym (GHC.Types.N:IO[0] <()>_R)))
+                               `cast`
+                             (GHC.Types.N:IO[0] <()>_R)
+                             Line.line2
+                             ds6 of ds4 { (#,#) ipv4 ipv5 ->
+                      case Graphics.GL.Functions.F07.ptr_glEnd of ds5 { GHC.Ptr.FunPtr ds7 ->
+                      case {__dyn_ccall_GC "" GHC.Prim.Addr#
+                                              -> GHC.Prim.State# GHC.Prim.RealWorld
+                                              -> (# GHC.Prim.State# GHC.Prim.RealWorld #)}
+                             ds7
+                             ipv4 of wild1 { Unit# ds8 ->
+                      (# ds8, ipv5 #) } } } } } } }) -}
+b74a9e0a4710509bcec12bf5ab8dbe78
+  $wvertex3f ::
+    GHC.Prim.Float#
+    -> GHC.Prim.Float#
+    -> GHC.Prim.Float#
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 4, Strictness: <S,U><S,U><S,U><S,U>, Inline: [0],
+     Unfolding: (\ (ww :: GHC.Prim.Float#)
+                   (ww1 :: GHC.Prim.Float#)
+                   (ww2 :: GHC.Prim.Float#)
+                   (w :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case Graphics.GL.Functions.F28.ptr_glVertex3f of ds4 { GHC.Ptr.FunPtr ds5 ->
+                 case {__dyn_ccall_GC "" GHC.Prim.Addr#
+                                         -> GHC.Prim.Float#
+                                         -> GHC.Prim.Float#
+                                         -> GHC.Prim.Float#
+                                         -> GHC.Prim.State# GHC.Prim.RealWorld
+                                         -> (# GHC.Prim.State# GHC.Prim.RealWorld #)}
+                        ds5
+                        ww
+                        ww1
+                        ww2
+                        w of wild { Unit# ds12 ->
+                 (# ds12, GHC.Tuple.() #) } }) -}
+0b4b8669ce42d335ebc3872373f08eab
+  line ::
+    (Graphics.GL.Types.GLfloat, Graphics.GL.Types.GLfloat,
+     Graphics.GL.Types.GLfloat)
+    -> (Graphics.GL.Types.GLfloat, Graphics.GL.Types.GLfloat,
+        Graphics.GL.Types.GLfloat)
+    -> GHC.Types.IO ()
+  {- Arity: 3,
+     Strictness: <S,1*U(U(U),U(U),U(U))><S,1*U(U(U),U(U),U(U))><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Line.line1
+                  `cast`
+                (<(Graphics.GL.Types.GLfloat, Graphics.GL.Types.GLfloat,
+                   Graphics.GL.Types.GLfloat)>_R
+                 ->_R <(Graphics.GL.Types.GLfloat, Graphics.GL.Types.GLfloat,
+                        Graphics.GL.Types.GLfloat)>_R
+                 ->_R Sym (GHC.Types.N:IO[0] <()>_R)) -}
+0e8185f40744b02757f4a71771afd945
+  line1 ::
+    (Graphics.GL.Types.GLfloat, Graphics.GL.Types.GLfloat,
+     Graphics.GL.Types.GLfloat)
+    -> (Graphics.GL.Types.GLfloat, Graphics.GL.Types.GLfloat,
+        Graphics.GL.Types.GLfloat)
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 3,
+     Strictness: <S,1*U(U(U),U(U),U(U))><S,1*U(U(U),U(U),U(U))><S,U>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (3, True, False)
+                (\ (w :: (Graphics.GL.Types.GLfloat, Graphics.GL.Types.GLfloat,
+                          Graphics.GL.Types.GLfloat))
+                   (w1 :: (Graphics.GL.Types.GLfloat, Graphics.GL.Types.GLfloat,
+                           Graphics.GL.Types.GLfloat))
+                   (w2 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case w of ww { (,,) ww1 ww2 ww3 ->
+                 case w1 of ww4 { (,,) ww5 ww6 ww7 ->
+                 Line.$wline ww1 ww2 ww3 ww5 ww6 ww7 w2 } }) -}
+541b4b3d04a0f8e8e3f360f4850d3334
+  line2 ::
+    GHC.Exception.SomeException
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 2, Strictness: <L,U><L,U>x -}
+d714252fd4df2950ed5f96099b3b13a4
+  vertex3f ::
+    (Graphics.GL.Types.GLfloat, Graphics.GL.Types.GLfloat,
+     Graphics.GL.Types.GLfloat)
+    -> GHC.Types.IO ()
+  {- Arity: 2,
+     Strictness: <S(S(S)S(S)S(S)),1*U(1*U(U),1*U(U),1*U(U))><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Line.vertex3f1
+                  `cast`
+                (<(Graphics.GL.Types.GLfloat, Graphics.GL.Types.GLfloat,
+                   Graphics.GL.Types.GLfloat)>_R
+                 ->_R Sym (GHC.Types.N:IO[0] <()>_R)) -}
+cc2327dc045c6b57ddb53dbaea2d3d56
+  vertex3f1 ::
+    (Graphics.GL.Types.GLfloat, Graphics.GL.Types.GLfloat,
+     Graphics.GL.Types.GLfloat)
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 2,
+     Strictness: <S(S(S)S(S)S(S)),1*U(1*U(U),1*U(U),1*U(U))><S,U>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, False)
+                (\ (w :: (Graphics.GL.Types.GLfloat, Graphics.GL.Types.GLfloat,
+                          Graphics.GL.Types.GLfloat))
+                   (w1 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case w of ww { (,,) ww1 ww2 ww3 ->
+                 case ww1 of ww4 { GHC.Types.F# ww5 ->
+                 case ww2 of ww6 { GHC.Types.F# ww7 ->
+                 case ww3 of ww8 { GHC.Types.F# ww9 ->
+                 Line.$wvertex3f ww5 ww7 ww9 w1 } } } }) -}
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: none
+require own pkg trusted: False
+

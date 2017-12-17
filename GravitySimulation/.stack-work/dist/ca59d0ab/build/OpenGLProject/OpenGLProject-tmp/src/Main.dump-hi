@@ -1,0 +1,610 @@
+
+==================== FINAL INTERFACE ====================
+2017-06-07 09:32:53.363229 UTC
+
+interface main@main:Main 8002
+  interface hash: 6f23f6b7dc25a2ff643f8645c22cc3bb
+  ABI hash: 1e5d9b69d05c0ab1e4bdbead050f2e95
+  export-list hash: dc6cd44e70c776f59d78059a5363fee0
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: 2c67f9fd5026ecdd9d3c18244723b6ca
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Main.main
+  Main.newBodies
+  Main.testBod
+module dependencies: Bindings Display Ellipse Line Math.Vector
+                     Physics.Gravity Points
+package dependencies: GLURaw-2.0.0.3@GLURaw-2.0.0.3-G12M6COyQIU5WfRlrIwPuj
+                      GLUT-2.7.0.12@GLUT-2.7.0.12-2MhssjvTvsoEqaoGvdwU4F
+                      ObjectName-1.1.0.1@ObjectName-1.1.0.1-EiFOWjUQWWuLyOhtrmuIWX
+                      OpenGL-3.0.2.0@OpenGL-3.0.2.0-4NExFyKSCLV2QLQh5nNNh9
+                      OpenGLRaw-3.2.4.0@OpenGLRaw-3.2.4.0-JDyGgOXR61GG549SwmWm2Q
+                      StateVar-1.1.0.4@StateVar-1.1.0.4-5dJbnTVECtEAhfJXPZKdbO
+                      array-0.5.1.1@array-0.5.1.1 base-4.9.1.0
+                      binary-0.8.3.0@binary-0.8.3.0
+                      bytestring-0.10.8.1@bytestring-0.10.8.1
+                      containers-0.5.7.1@containers-0.5.7.1
+                      deepseq-1.4.2.0@deepseq-1.4.2.0
+                      fixed-0.2.1.1@fixed-0.2.1.1-8Jr82l0kss5Gr4nEevmXlZ ghc-prim-0.5.0.0
+                      half-0.2.2.3@half-0.2.2.3-GHJ372Ls7FBA3PAGtGHfOR
+                      integer-gmp-1.0.0.1 stm-2.4.4.1@stm-2.4.4.1-JQn4hNPyYjP5m9AcbI88Ve
+                      text-1.2.2.1@text-1.2.2.1-Ji7hMs2U4BkBwavd4taEVR
+orphans: base-4.9.1.0:GHC.Base base-4.9.1.0:GHC.Float
+         binary-0.8.3.0@binary-0.8.3.0:Data.Binary.Generic
+         bytestring-0.10.8.1@bytestring-0.10.8.1:Data.ByteString.Builder
+         stm-2.4.4.1@stm-2.4.4.1-JQn4hNPyYjP5m9AcbI88Ve:Control.Monad.STM
+         text-1.2.2.1@text-1.2.2.1-Ji7hMs2U4BkBwavd4taEVR:Data.Text
+         text-1.2.2.1@text-1.2.2.1-Ji7hMs2U4BkBwavd4taEVR:Data.Text.Show
+family instance modules: base-4.9.1.0:Control.Applicative
+                         base-4.9.1.0:Data.Complex base-4.9.1.0:Data.Either
+                         base-4.9.1.0:Data.Functor.Const base-4.9.1.0:Data.Functor.Identity
+                         base-4.9.1.0:Data.List.NonEmpty base-4.9.1.0:Data.Monoid
+                         base-4.9.1.0:Data.Semigroup base-4.9.1.0:Data.Type.Equality
+                         base-4.9.1.0:Data.Version base-4.9.1.0:Data.Void
+                         base-4.9.1.0:GHC.Exts base-4.9.1.0:GHC.Generics
+                         base-4.9.1.0:GHC.IO.Exception base-4.9.1.0:GHC.TypeLits
+                         containers-0.5.7.1@containers-0.5.7.1:Data.IntMap.Base
+                         containers-0.5.7.1@containers-0.5.7.1:Data.IntSet.Base
+                         containers-0.5.7.1@containers-0.5.7.1:Data.Map.Base
+                         containers-0.5.7.1@containers-0.5.7.1:Data.Sequence
+                         containers-0.5.7.1@containers-0.5.7.1:Data.Set.Base
+                         text-1.2.2.1@text-1.2.2.1-Ji7hMs2U4BkBwavd4taEVR:Data.Text
+import  -/  GLUT-2.7.0.12@GLUT-2.7.0.12-2MhssjvTvsoEqaoGvdwU4F:Graphics.UI.GLUT 739277ef0ec51991551b963ff25b5bd3
+import  -/  GLUT-2.7.0.12@GLUT-2.7.0.12-2MhssjvTvsoEqaoGvdwU4F:Graphics.UI.GLUT.Begin cb20f8915613c8f04da15653a828cdd8
+import  -/  GLUT-2.7.0.12@GLUT-2.7.0.12-2MhssjvTvsoEqaoGvdwU4F:Graphics.UI.GLUT.Callbacks.Global e448d02507bdaa7275c70917820f9ab2
+import  -/  GLUT-2.7.0.12@GLUT-2.7.0.12-2MhssjvTvsoEqaoGvdwU4F:Graphics.UI.GLUT.Callbacks.Window 4ede9f60f3ede39b21bb16800c4bff68
+import  -/  GLUT-2.7.0.12@GLUT-2.7.0.12-2MhssjvTvsoEqaoGvdwU4F:Graphics.UI.GLUT.Initialization fafa6f916cbe28204e71f3d2489e801d
+import  -/  GLUT-2.7.0.12@GLUT-2.7.0.12-2MhssjvTvsoEqaoGvdwU4F:Graphics.UI.GLUT.Window 84e1a880f2677b99e23ef006fb1a141b
+import  -/  StateVar-1.1.0.4@StateVar-1.1.0.4-5dJbnTVECtEAhfJXPZKdbO:Data.StateVar 8e3791e8e9cfdfc16cb4d1fbef4901cf
+import  -/  base-4.9.1.0:Data.Fixed a9378f335cf157ea1d5305945fbb05ab
+import  -/  base-4.9.1.0:Data.IORef c73d02c54df09a5b747108a87da60f73
+import  -/  base-4.9.1.0:GHC.IORef b977a2a1741af520d9defa4a879c1ccf
+import  -/  base-4.9.1.0:Prelude 74b3e204395920329f6de9d97206abe9
+import  -/  ghc-prim-0.5.0.0:GHC.Classes 16d48e012d23eaef9bca91ccdd572c02
+import  -/  ghc-prim-0.5.0.0:GHC.Types 89f8de4f08018c9177c98d979eae0e45
+import  -/  Bindings bc32bc13bdb84d442db6d8a7dbd4f5e8
+  exports: aadd9d6181b04d8bc5e7d7f6f6ef053a
+  keyboardMouse 5681f38992d72b352ec3a022380a3e18
+  reshape b75f57007221bb0f2e909c96136f1818
+import  -/  Display f98e93cc79abcce4486dfbe37e9b3572
+  display a34652ee1b6c64338367c084f0f15cce
+  idle 9948c858ba83debf26542ab6c0290461
+import  -/  Math.Vector 75eeb9eb9b10c0299ed6cc315c4561d5
+  exports: 51e9f72c030bff90ebfae489a39fc25f
+  Vector 8cfaf42bdea1a9bf155d3b5ff5d4a9b5
+  zero 7f5d468971fb1b53574db47dc14f1f45
+import  -/  Physics.Gravity 03159c9bd4fe084c98722742b05dc34b
+  exports: 16f3a1591d0772174bea79ce6e3bd9b8
+  Body 2baa72ffc403891fd9c90f33ef4d88aa
+d6831ef04cb9301b090dfae6f7bb7ec7
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module Main.$trModule2 Main.$trModule1) -}
+847d9fc3b8e6f0b424199f36b4999bb2
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "Main"#) -}
+24ef6042833e75ffd7aa98b83ecca98d
+  $trModule2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "main"#) -}
+0eb06c49eb371f8303b78edf713933aa
+  $w$wxs ::
+    GHC.Prim.Int#
+    -> (# Graphics.GL.Types.GLfloat, [Graphics.GL.Types.GLfloat] #)
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U>, Inline: [0] -}
+021ed0ded591bb0ae1bdfe2037154221
+  $w$wxs1 ::
+    GHC.Prim.Int#
+    -> (# Graphics.GL.Types.GLfloat, [Graphics.GL.Types.GLfloat] #)
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U>, Inline: [0] -}
+925c51f7092ca0d47a98ea53d744e375
+  $w$wxs2 ::
+    GHC.Prim.Int#
+    -> (# Graphics.GL.Types.GLfloat, [Graphics.GL.Types.GLfloat] #)
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U>, Inline: [0] -}
+0b9e9012a1f37194f5475715dd10d333
+  $w$wxs3 ::
+    GHC.Prim.Int#
+    -> (# Graphics.GL.Types.GLfloat, [Graphics.GL.Types.GLfloat] #)
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U>, Inline: [0] -}
+37d2649f45c0c1c5b76269b0dbb99947
+  $w$wxs4 ::
+    GHC.Prim.Int#
+    -> (# Graphics.GL.Types.GLfloat, [Graphics.GL.Types.GLfloat] #)
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U>, Inline: [0] -}
+d31adcb077f182702f7c7f645c84d025
+  $w$wxs5 ::
+    GHC.Prim.Int#
+    -> (# Graphics.GL.Types.GLfloat, [Graphics.GL.Types.GLfloat] #)
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U>, Inline: [0] -}
+0d3bf804b9026fcce2b3631e2697c4e8
+  $w$wxs6 ::
+    GHC.Prim.Int#
+    -> (# Graphics.GL.Types.GLfloat, [Graphics.GL.Types.GLfloat] #)
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U>, Inline: [0] -}
+f1c103bdfe1ee55023812ca138e15fa6
+  $w$wxs7 ::
+    GHC.Prim.Int#
+    -> (# Graphics.GL.Types.GLfloat, [Graphics.GL.Types.GLfloat] #)
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U>, Inline: [0] -}
+bd2356111c94e0ea8a0bc0f0b38ae05e
+  main :: GHC.Types.IO ()
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Main.main1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R)) -}
+3acbf22009fb216160e638d4297e9271
+  main1 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: (\ (s :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case Graphics.UI.GLUT.Initialization.getArgsAndInitialize1
+                        s of ds1 { (#,#) ipv ipv1 ->
+                 case ipv1 of wild { (,) _progName _args ->
+                 case Graphics.UI.GLUT.Initialization.initialDisplayMode1
+                        Main.main8
+                        ipv of ds2 { (#,#) ipv2 ipv3 ->
+                 case GHC.IO.Encoding.getForeignEncoding1 of wild1 { (,) getForeignEncoding4 setForeignEncoding1 ->
+                 case getForeignEncoding4
+                        `cast`
+                      (GHC.Types.N:IO[0] <GHC.IO.Encoding.Types.TextEncoding>_R)
+                        ipv2 of ds3 { (#,#) ipv4 ipv5 ->
+                 case GHC.Foreign.charIsRepresentable3
+                        @ Foreign.C.Types.CInt
+                        ipv5
+                        Main.main7
+                        Graphics.UI.GLUT.Window.createWindow1
+                          `cast`
+                        (<GHC.Ptr.Ptr Foreign.C.Types.CChar>_R
+                         ->_R Sym (GHC.Types.N:IO[0] (Foreign.C.Types.N:CInt[0])))
+                        ipv4 of ds { (#,#) ipv6 ipv7 ->
+                 case Graphics.UI.GLUT.Callbacks.Registration.setCallback1
+                        @ Graphics.UI.GLUT.Raw.Callbacks.ReshapeFunc
+                        @ (Graphics.Rendering.OpenGL.GL.CoordTrans.Size -> GHC.Types.IO ())
+                        Graphics.UI.GLUT.Callbacks.Registration.ReshapeCB
+                        Graphics.UI.GLUT.Callbacks.Window.reshapeCallback3
+                          `cast`
+                        (<GHC.Ptr.FunPtr Graphics.UI.GLUT.Raw.Callbacks.ReshapeFunc>_R
+                         ->_R Sym (GHC.Types.N:IO[0] <()>_R))
+                        Graphics.UI.GLUT.Callbacks.Window.reshapeCallback2
+                          `cast`
+                        (<Graphics.Rendering.OpenGL.GL.CoordTrans.Size
+                          -> GHC.Types.IO ()>_R
+                         ->_R Sym (GHC.Types.N:IO[0]
+                                       <GHC.Ptr.FunPtr
+                                          Graphics.UI.GLUT.Raw.Callbacks.ReshapeFunc>_R))
+                        Main.main6
+                        ipv6 of ds4 { (#,#) ipv8 ipv9 ->
+                 case GHC.Prim.newMutVar#
+                        @ [Physics.Gravity.Body]
+                        @ GHC.Prim.RealWorld
+                        Main.newBodies
+                        ipv8 of ds5 { (#,#) ipv10 ipv11 ->
+                 case GHC.Prim.newMutVar#
+                        @ Graphics.GL.Types.GLfloat
+                        @ GHC.Prim.RealWorld
+                        Main.main5
+                        ipv10 of ds6 { (#,#) ipv12 ipv13 ->
+                 case GHC.Prim.newMutVar#
+                        @ Graphics.GL.Types.GLfloat
+                        @ GHC.Prim.RealWorld
+                        Main.main4
+                        ipv12 of ds7 { (#,#) ipv14 ipv15 ->
+                 case GHC.Prim.newMutVar#
+                        @ (Graphics.GL.Types.GLfloat, Graphics.GL.Types.GLfloat)
+                        @ GHC.Prim.RealWorld
+                        Main.main2
+                        ipv14 of ds8 { (#,#) ipv16 ipv17 ->
+                 let {
+                   ipv18 :: GHC.STRef.STRef
+                              GHC.Prim.RealWorld Graphics.GL.Types.GLfloat
+                     {- Strictness: m -}
+                   = GHC.STRef.STRef
+                       @ GHC.Prim.RealWorld
+                       @ Graphics.GL.Types.GLfloat
+                       ipv15
+                 } in
+                 let {
+                   ipv19 :: GHC.STRef.STRef
+                              GHC.Prim.RealWorld
+                              (Graphics.GL.Types.GLfloat, Graphics.GL.Types.GLfloat)
+                     {- Strictness: m -}
+                   = GHC.STRef.STRef
+                       @ GHC.Prim.RealWorld
+                       @ (Graphics.GL.Types.GLfloat, Graphics.GL.Types.GLfloat)
+                       ipv17
+                 } in
+                 case Graphics.UI.GLUT.Callbacks.Window.keyboardMouseCallback1
+                        (GHC.Base.Just
+                           @ Graphics.UI.GLUT.Callbacks.Window.KeyboardMouseCallback
+                           (\ (w3 :: Graphics.UI.GLUT.Callbacks.Window.Key)
+                              (w4 :: Graphics.UI.GLUT.Callbacks.Window.KeyState)
+                              (w5 :: Graphics.UI.GLUT.Callbacks.Window.Modifiers)
+                              (w6 :: Graphics.Rendering.OpenGL.GL.CoordTrans.Position)
+                              (w7 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                            Bindings.$wkeyboardMouse
+                              ipv18
+                                `cast`
+                              (Sym (GHC.IORef.N:IORef[0]) <Graphics.GL.Types.GLfloat>_N)
+                              ipv19
+                                `cast`
+                              (Sym (GHC.IORef.N:IORef[0]) <(Graphics.GL.Types.GLfloat,
+                                                            Graphics.GL.Types.GLfloat)>_N)
+                              w3
+                              w4
+                              w6
+                              w7)
+                             `cast`
+                           (<Graphics.UI.GLUT.Callbacks.Window.Key>_R
+                            ->_R <Graphics.UI.GLUT.Callbacks.Window.KeyState>_R
+                            ->_R <Graphics.UI.GLUT.Callbacks.Window.Modifiers>_R
+                            ->_R <Graphics.Rendering.OpenGL.GL.CoordTrans.Position>_R
+                            ->_R Sym (GHC.Types.N:IO[0] <()>_R)))
+                        ipv16 of ds9 { (#,#) ipv20 ipv21 ->
+                 case Graphics.UI.GLUT.Callbacks.Registration.setCallback1
+                        @ Graphics.UI.GLUT.Raw.Callbacks.IdleFunc
+                        @ Graphics.UI.GLUT.Raw.Callbacks.IdleFunc
+                        Graphics.UI.GLUT.Callbacks.Registration.IdleCB
+                        Graphics.UI.GLUT.Callbacks.Global.idleCallback2
+                          `cast`
+                        (<GHC.Ptr.FunPtr Graphics.UI.GLUT.Raw.Callbacks.IdleFunc>_R
+                         ->_R Sym (GHC.Types.N:IO[0] <()>_R))
+                        Graphics.UI.GLUT.Raw.Callbacks.makeIdleFunc
+                        (GHC.Base.Just
+                           @ Graphics.UI.GLUT.Callbacks.Global.IdleCallback
+                           (\ (w2 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                            case GHC.Prim.readMutVar#
+                                   @ GHC.Prim.RealWorld
+                                   @ GHC.Types.Float
+                                   ipv13
+                                   w2 of ds10 { (#,#) ipv22 ipv23 ->
+                            case GHC.Prim.atomicModifyMutVar#
+                                   @ GHC.Prim.RealWorld
+                                   @ [Physics.Gravity.Body]
+                                   @ ([Physics.Gravity.Body], ())
+                                   @ ()
+                                   ipv11
+                                   Display.idle2
+                                   ipv22 of ds11 { (#,#) ipv24 ipv25 ->
+                            case ipv25 of b1 { () ->
+                            Graphics.UI.GLUT.Raw.Functions.glutPostRedisplay1 ipv24 } } })
+                             `cast`
+                           (Sym (GHC.Types.N:IO[0] <()>_R)))
+                        ipv20 of ds10 { (#,#) ipv22 ipv23 ->
+                 case Graphics.UI.GLUT.Callbacks.Registration.setCallback1
+                        @ Graphics.UI.GLUT.Raw.Callbacks.DisplayFunc
+                        @ Graphics.UI.GLUT.Raw.Callbacks.DisplayFunc
+                        Graphics.UI.GLUT.Callbacks.Registration.DisplayCB
+                        Graphics.UI.GLUT.Callbacks.Window.displayCallback2
+                          `cast`
+                        (<GHC.Ptr.FunPtr Graphics.UI.GLUT.Raw.Callbacks.DisplayFunc>_R
+                         ->_R Sym (GHC.Types.N:IO[0] <()>_R))
+                        Graphics.UI.GLUT.Raw.Callbacks.makeDisplayFunc
+                        (GHC.Base.Just
+                           @ Graphics.UI.GLUT.Raw.Callbacks.DisplayFunc
+                           (\ (w3 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                            Display.$wdisplay ipv11 ipv17 ipv15 w3)
+                             `cast`
+                           (Sym (GHC.Types.N:IO[0] <()>_R)))
+                        ipv22 of ds11 { (#,#) ipv24 ipv25 ->
+                 Graphics.UI.GLUT.Raw.Functions.glutMainLoop1
+                   ipv24 } } } } } } } } } } } } } }) -}
+cbb96dcf41a1119d65fa0d1ec11681d6
+  main2 :: (GHC.Types.Float, GHC.Types.Float)
+  {- HasNoCafRefs, Unfolding: ((Main.main3, Main.main3)) -}
+12a0e4d117515372a7ba2515aa0fb4a8
+  main3 :: GHC.Types.Float
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.F# 0.0#) -}
+53518a0d7b6a7192dda5bb63b23a6eea
+  main4 :: GHC.Types.Float
+  {- HasNoCafRefs, Unfolding: (GHC.Types.F# 0.1#) -}
+7945d86d8aae641bed3e90a5005a0f82
+  main5 :: GHC.Types.Float
+  {- HasNoCafRefs, Unfolding: (GHC.Types.F# 100.0#) -}
+a1f44f757e2426271889871bc19811e0
+  main6 ::
+    GHC.Base.Maybe Graphics.UI.GLUT.Callbacks.Window.ReshapeCallback
+  {- Unfolding: (GHC.Base.Just
+                   @ Graphics.UI.GLUT.Callbacks.Window.ReshapeCallback
+                   Bindings.reshape1
+                     `cast`
+                   (<Graphics.Rendering.OpenGL.GL.CoordTrans.Size>_R
+                    ->_R Sym (GHC.Types.N:IO[0] <()>_R))) -}
+a1ff6b42f11200d74898bf5df8ebe5be
+  main7 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "Hello World"#) -}
+cb7512eea76ccacb71bd223a6c6a9ee5
+  main8 :: [Graphics.UI.GLUT.Initialization.DisplayMode]
+  {- HasNoCafRefs,
+     Unfolding: (GHC.Types.:
+                   @ Graphics.UI.GLUT.Initialization.DisplayMode
+                   Graphics.UI.GLUT.Initialization.DoubleBuffered
+                   (GHC.Types.[] @ Graphics.UI.GLUT.Initialization.DisplayMode)) -}
+1c9297695ba7e3d8d2f4bcdc0890435f
+  main9 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1,
+     Unfolding: (GHC.TopHandler.runMainIO1
+                   @ ()
+                   Main.main1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R))) -}
+a15f97d21ac3e0a0b1783f586f974544
+  newBodies :: [Physics.Gravity.Body]
+  {- Unfolding: (Main.newBodies_go Main.newBodies1) -}
+0543379215307e064545c318e672a0fa
+  newBodies1 :: [GHC.Types.Float]
+  {- Unfolding: (GHC.Real.numericEnumFromTo
+                   @ GHC.Types.Float
+                   GHC.Classes.$fOrdFloat
+                   GHC.Float.$fFractionalFloat
+                   Main.newBodies3
+                   Main.newBodies2) -}
+8c8850b66bd7dc1e5a27b4d4f254af5a
+  newBodies2 :: GHC.Types.Float
+  {- HasNoCafRefs, Unfolding: (GHC.Types.F# 10.0#) -}
+fbd1d986b5314098de09084c7695f554
+  newBodies3 :: GHC.Types.Float
+  {- HasNoCafRefs, Unfolding: (GHC.Types.F# -10.0#) -}
+6f3246ee07c7aedebc9ca2942ca04adf
+  newBodies_go ::
+    [Graphics.GL.Types.GLfloat] -> [Physics.Gravity.Body]
+  {- Arity: 1, Strictness: <S,1*U> -}
+dcde993182584dfcdd2b93af2d0632fc
+  testBod :: [Physics.Gravity.Body]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ Physics.Gravity.Body
+                   Main.testBod31
+                   Main.testBod1) -}
+34b5e6ba03b8974943e076a5b9dc3644
+  testBod1 :: [Physics.Gravity.Body]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ Physics.Gravity.Body
+                   Main.testBod22
+                   Main.testBod2) -}
+75eeecf00a89ae2a2d0ffc1b0813b7d8
+  testBod10 :: [Graphics.GL.Types.GLfloat]
+  {- HasNoCafRefs,
+     Unfolding: (GHC.Types.:
+                   @ Graphics.GL.Types.GLfloat
+                   Main.main3
+                   (GHC.Types.[] @ Graphics.GL.Types.GLfloat)) -}
+9cb3c1332f3d34bad56a4df5c40198fa
+  testBod11 :: GHC.Types.Float
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.F# -3.0#) -}
+b05f4ee4fbe4c57dc684833668332538
+  testBod12 :: GHC.Types.Float
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.F# -2.0#) -}
+b7266e94d9dd022c2537d4231a511091
+  testBod13 :: GHC.Types.Float
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.F# 1.0#) -}
+16c88ed64928fcdba33d7fbbf50c0b5d
+  testBod14 :: Physics.Gravity.Body
+  {- Strictness: m,
+     Unfolding: (Physics.Gravity.Body
+                   Main.testBod21
+                   Main.testBod17
+                   Main.testBod16
+                   Main.testBod15) -}
+acf7f2dae8bffdf489e29c0e3e717be4
+  testBod15 :: Math.Vector.Vector Graphics.GL.Types.GLfloat
+  {- Strictness: m1,
+     Unfolding: (Math.Vector.Vector
+                   @ Graphics.GL.Types.GLfloat
+                   Main.testBod_ww3) -}
+6022f5d1ca3ba48074ebd15865f35f4f
+  testBod16 :: Math.Vector.Vector Graphics.GL.Types.GLfloat
+  {- Strictness: m1,
+     Unfolding: (Math.Vector.Vector
+                   @ Graphics.GL.Types.GLfloat
+                   Main.testBod_ww4) -}
+e0538487615363b4eb8c3414af80755a
+  testBod17 :: Math.Vector.Vector Graphics.GL.Types.GLfloat
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (Math.Vector.Vector
+                   @ Graphics.GL.Types.GLfloat
+                   Main.testBod18) -}
+f7d51bf3e3144570c7ff66e2bb8fc06d
+  testBod18 :: [Graphics.GL.Types.GLfloat]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ Graphics.GL.Types.GLfloat
+                   Main.testBod20
+                   Main.testBod19) -}
+ced692e1da965f367cad1ccf9638c863
+  testBod19 :: [Graphics.GL.Types.GLfloat]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ Graphics.GL.Types.GLfloat
+                   Main.testBod20
+                   Main.testBod10) -}
+55582c694e2508433c9450a5fc756cba
+  testBod2 :: [Physics.Gravity.Body]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ Physics.Gravity.Body
+                   Main.testBod14
+                   Main.testBod3) -}
+5f892f0cfd8c7420f089ab6b463e8b45
+  testBod20 :: GHC.Types.Float
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.F# 2.0#) -}
+f41e02e52fce249aa509cf744586ffb8
+  testBod21 :: GHC.Types.Float
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.F# 0.3#) -}
+ee8b0210659487b7af523f73bc675d26
+  testBod22 :: Physics.Gravity.Body
+  {- Strictness: m,
+     Unfolding: (Physics.Gravity.Body
+                   Main.testBod30
+                   Main.testBod25
+                   Main.testBod24
+                   Main.testBod23) -}
+87aabe849765ad80f340e97a8de9515a
+  testBod23 :: Math.Vector.Vector Graphics.GL.Types.GLfloat
+  {- Strictness: m1,
+     Unfolding: (Math.Vector.Vector
+                   @ Graphics.GL.Types.GLfloat
+                   Main.testBod_ww5) -}
+b52c8bbe85f37d4ab3d8dea25d75dd72
+  testBod24 :: Math.Vector.Vector Graphics.GL.Types.GLfloat
+  {- Strictness: m1,
+     Unfolding: (Math.Vector.Vector
+                   @ Graphics.GL.Types.GLfloat
+                   Main.testBod_ww6) -}
+75d684b7390825f51437df7b0572d19f
+  testBod25 :: Math.Vector.Vector Graphics.GL.Types.GLfloat
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (Math.Vector.Vector
+                   @ Graphics.GL.Types.GLfloat
+                   Main.testBod26) -}
+83091a7a1183962f39965c85cfcb6525
+  testBod26 :: [Graphics.GL.Types.GLfloat]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ Graphics.GL.Types.GLfloat
+                   Main.testBod29
+                   Main.testBod27) -}
+80a73e087042a98ba5de96451387663e
+  testBod27 :: [Graphics.GL.Types.GLfloat]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ Graphics.GL.Types.GLfloat
+                   Main.testBod28
+                   Main.testBod10) -}
+47e2cd286c2a10829e59993da0db662c
+  testBod28 :: GHC.Types.Float
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.F# 4.0#) -}
+0919bf13fbae17c65420e97278dfa002
+  testBod29 :: GHC.Types.Float
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.F# 3.0#) -}
+189cee4496c9a71b7778ea3705e0b0af
+  testBod3 :: [Physics.Gravity.Body]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ Physics.Gravity.Body
+                   Main.testBod4
+                   (GHC.Types.[] @ Physics.Gravity.Body)) -}
+d26087d6393c70ad6b6ad7a4b02b1dec
+  testBod30 :: GHC.Types.Float
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.F# 0.2#) -}
+c3320496075d6c8cfbbf3cb9804c079d
+  testBod31 :: Physics.Gravity.Body
+  {- Strictness: m,
+     Unfolding: (Physics.Gravity.Body
+                   Main.testBod36
+                   Main.testBod34
+                   Main.testBod33
+                   Main.testBod32) -}
+658dfb054956e6a64db432484f174edc
+  testBod32 :: Math.Vector.Vector Graphics.GL.Types.GLfloat
+  {- Strictness: m1,
+     Unfolding: (Math.Vector.Vector
+                   @ Graphics.GL.Types.GLfloat
+                   Main.testBod_ww7) -}
+988bb0de0020e9cdc8452d05e74ca367
+  testBod33 :: Math.Vector.Vector Graphics.GL.Types.GLfloat
+  {- Strictness: m1,
+     Unfolding: (Math.Vector.Vector
+                   @ Graphics.GL.Types.GLfloat
+                   Main.testBod_ww8) -}
+0f3f7a78216eac81f5764ed7dace28f9
+  testBod34 :: Math.Vector.Vector Graphics.GL.Types.GLfloat
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (Math.Vector.Vector
+                   @ Graphics.GL.Types.GLfloat
+                   Main.testBod35) -}
+acb2be63abf572911c11d0e2492d945b
+  testBod35 :: [Graphics.GL.Types.GLfloat]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ Graphics.GL.Types.GLfloat
+                   Main.testBod13
+                   Main.testBod19) -}
+ae2a05ba036f57c8a21f8a4de7716767
+  testBod36 :: GHC.Types.Float
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.F# 0.4#) -}
+2ee57a25c8b92769b3ec0ada3931b8cd
+  testBod4 :: Physics.Gravity.Body
+  {- Strictness: m,
+     Unfolding: (Physics.Gravity.Body
+                   Main.testBod13
+                   Main.testBod7
+                   Main.testBod6
+                   Main.testBod5) -}
+d725209cc51d61a43848f34dd2a6f691
+  testBod5 :: Math.Vector.Vector Graphics.GL.Types.GLfloat
+  {- Strictness: m1,
+     Unfolding: (Math.Vector.Vector
+                   @ Graphics.GL.Types.GLfloat
+                   Main.testBod_ww1) -}
+4d4af4d320427c9fdd2390831d72f885
+  testBod6 :: Math.Vector.Vector Graphics.GL.Types.GLfloat
+  {- Strictness: m1,
+     Unfolding: (Math.Vector.Vector
+                   @ Graphics.GL.Types.GLfloat
+                   Main.testBod_ww2) -}
+387a0bb0db7be869233fb1d4678e0ee3
+  testBod7 :: Math.Vector.Vector Graphics.GL.Types.GLfloat
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (Math.Vector.Vector
+                   @ Graphics.GL.Types.GLfloat
+                   Main.testBod8) -}
+7a2f48fe2f42cbaa09eb46c158f4c4b3
+  testBod8 :: [Graphics.GL.Types.GLfloat]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ Graphics.GL.Types.GLfloat
+                   Main.testBod12
+                   Main.testBod9) -}
+f34d481245383391bd2f4c7b6cf45d79
+  testBod9 :: [Graphics.GL.Types.GLfloat]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ Graphics.GL.Types.GLfloat
+                   Main.testBod11
+                   Main.testBod10) -}
+54060ad3320a3e5d33f563cff3310cdc
+  testBod_ww1 :: [Graphics.GL.Types.GLfloat]
+  {- Unfolding: (case Main.$w$wxs 3# of ww { (#,#) ww3 ww4 ->
+                 GHC.Types.: @ Graphics.GL.Types.GLfloat ww3 ww4 }) -}
+80568b5e7bf1f7ce27a8d92822889427
+  testBod_ww2 :: [Graphics.GL.Types.GLfloat]
+  {- Unfolding: (case Main.$w$wxs1 3# of ww { (#,#) ww3 ww4 ->
+                 GHC.Types.: @ Graphics.GL.Types.GLfloat ww3 ww4 }) -}
+cd2710995289b49568399d7f76330a50
+  testBod_ww3 :: [Graphics.GL.Types.GLfloat]
+  {- Unfolding: (case Main.$w$wxs2 3# of ww { (#,#) ww3 ww4 ->
+                 GHC.Types.: @ Graphics.GL.Types.GLfloat ww3 ww4 }) -}
+4deb0c82c8c4f385bd895ddd3c4ec2fb
+  testBod_ww4 :: [Graphics.GL.Types.GLfloat]
+  {- Unfolding: (case Main.$w$wxs3 3# of ww { (#,#) ww3 ww4 ->
+                 GHC.Types.: @ Graphics.GL.Types.GLfloat ww3 ww4 }) -}
+33ec26b50725748f920f7967c4555b9e
+  testBod_ww5 :: [Graphics.GL.Types.GLfloat]
+  {- Unfolding: (case Main.$w$wxs4 3# of ww { (#,#) ww3 ww4 ->
+                 GHC.Types.: @ Graphics.GL.Types.GLfloat ww3 ww4 }) -}
+884f7f7da981798fc3fb650411c52209
+  testBod_ww6 :: [Graphics.GL.Types.GLfloat]
+  {- Unfolding: (case Main.$w$wxs5 3# of ww { (#,#) ww3 ww4 ->
+                 GHC.Types.: @ Graphics.GL.Types.GLfloat ww3 ww4 }) -}
+68411e1701fe2f96e2cd29ded141e421
+  testBod_ww7 :: [Graphics.GL.Types.GLfloat]
+  {- Unfolding: (case Main.$w$wxs6 3# of ww { (#,#) ww3 ww4 ->
+                 GHC.Types.: @ Graphics.GL.Types.GLfloat ww3 ww4 }) -}
+60a1e134eaaa861df21394b185a76a23
+  testBod_ww8 :: [Graphics.GL.Types.GLfloat]
+  {- Unfolding: (case Main.$w$wxs7 3# of ww { (#,#) ww3 ww4 ->
+                 GHC.Types.: @ Graphics.GL.Types.GLfloat ww3 ww4 }) -}
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: none
+require own pkg trusted: False
+

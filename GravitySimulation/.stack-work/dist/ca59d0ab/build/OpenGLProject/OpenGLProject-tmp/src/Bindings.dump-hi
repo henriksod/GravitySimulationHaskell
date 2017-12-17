@@ -1,0 +1,392 @@
+
+==================== FINAL INTERFACE ====================
+2017-06-07 09:32:53.2098211 UTC
+
+interface main@main:Bindings 8002
+  interface hash: 198f7ad1d0861f2018733e56b5acb7b2
+  ABI hash: bc32bc13bdb84d442db6d8a7dbd4f5e8
+  export-list hash: aadd9d6181b04d8bc5e7d7f6f6ef053a
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: 261f115e14f73dd6f15249b879614e80
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Bindings.keyboardMouse
+  Bindings.reshape
+  Display.display
+  Display.idle
+module dependencies: Display Ellipse Line Math.Vector
+                     Physics.Gravity Points
+package dependencies: GLURaw-2.0.0.3@GLURaw-2.0.0.3-G12M6COyQIU5WfRlrIwPuj
+                      GLUT-2.7.0.12@GLUT-2.7.0.12-2MhssjvTvsoEqaoGvdwU4F
+                      ObjectName-1.1.0.1@ObjectName-1.1.0.1-EiFOWjUQWWuLyOhtrmuIWX
+                      OpenGL-3.0.2.0@OpenGL-3.0.2.0-4NExFyKSCLV2QLQh5nNNh9
+                      OpenGLRaw-3.2.4.0@OpenGLRaw-3.2.4.0-JDyGgOXR61GG549SwmWm2Q
+                      StateVar-1.1.0.4@StateVar-1.1.0.4-5dJbnTVECtEAhfJXPZKdbO
+                      array-0.5.1.1@array-0.5.1.1 base-4.9.1.0
+                      binary-0.8.3.0@binary-0.8.3.0
+                      bytestring-0.10.8.1@bytestring-0.10.8.1
+                      containers-0.5.7.1@containers-0.5.7.1
+                      deepseq-1.4.2.0@deepseq-1.4.2.0
+                      fixed-0.2.1.1@fixed-0.2.1.1-8Jr82l0kss5Gr4nEevmXlZ ghc-prim-0.5.0.0
+                      half-0.2.2.3@half-0.2.2.3-GHJ372Ls7FBA3PAGtGHfOR
+                      integer-gmp-1.0.0.1 stm-2.4.4.1@stm-2.4.4.1-JQn4hNPyYjP5m9AcbI88Ve
+                      text-1.2.2.1@text-1.2.2.1-Ji7hMs2U4BkBwavd4taEVR
+orphans: base-4.9.1.0:GHC.Base base-4.9.1.0:GHC.Float
+         binary-0.8.3.0@binary-0.8.3.0:Data.Binary.Generic
+         bytestring-0.10.8.1@bytestring-0.10.8.1:Data.ByteString.Builder
+         stm-2.4.4.1@stm-2.4.4.1-JQn4hNPyYjP5m9AcbI88Ve:Control.Monad.STM
+         text-1.2.2.1@text-1.2.2.1-Ji7hMs2U4BkBwavd4taEVR:Data.Text
+         text-1.2.2.1@text-1.2.2.1-Ji7hMs2U4BkBwavd4taEVR:Data.Text.Show
+family instance modules: base-4.9.1.0:Control.Applicative
+                         base-4.9.1.0:Data.Complex base-4.9.1.0:Data.Either
+                         base-4.9.1.0:Data.Functor.Const base-4.9.1.0:Data.Functor.Identity
+                         base-4.9.1.0:Data.List.NonEmpty base-4.9.1.0:Data.Monoid
+                         base-4.9.1.0:Data.Semigroup base-4.9.1.0:Data.Type.Equality
+                         base-4.9.1.0:Data.Version base-4.9.1.0:Data.Void
+                         base-4.9.1.0:GHC.Exts base-4.9.1.0:GHC.Generics
+                         base-4.9.1.0:GHC.IO.Exception base-4.9.1.0:GHC.TypeLits
+                         containers-0.5.7.1@containers-0.5.7.1:Data.IntMap.Base
+                         containers-0.5.7.1@containers-0.5.7.1:Data.IntSet.Base
+                         containers-0.5.7.1@containers-0.5.7.1:Data.Map.Base
+                         containers-0.5.7.1@containers-0.5.7.1:Data.Sequence
+                         containers-0.5.7.1@containers-0.5.7.1:Data.Set.Base
+                         text-1.2.2.1@text-1.2.2.1-Ji7hMs2U4BkBwavd4taEVR:Data.Text
+import  -/  GLUT-2.7.0.12@GLUT-2.7.0.12-2MhssjvTvsoEqaoGvdwU4F:Graphics.UI.GLUT 739277ef0ec51991551b963ff25b5bd3
+import  -/  GLUT-2.7.0.12@GLUT-2.7.0.12-2MhssjvTvsoEqaoGvdwU4F:Graphics.UI.GLUT.Callbacks.Window 4ede9f60f3ede39b21bb16800c4bff68
+import  -/  OpenGL-3.0.2.0@OpenGL-3.0.2.0-4NExFyKSCLV2QLQh5nNNh9:Graphics.Rendering.OpenGL.GL.CoordTrans 707c62f30f280bd2e92eaf4a75cc275c
+import  -/  OpenGLRaw-3.2.4.0@OpenGLRaw-3.2.4.0-JDyGgOXR61GG549SwmWm2Q:Graphics.GL.Types c6427027ca04c13c172d159d696662ed
+import  -/  StateVar-1.1.0.4@StateVar-1.1.0.4-5dJbnTVECtEAhfJXPZKdbO:Data.StateVar 8e3791e8e9cfdfc16cb4d1fbef4901cf
+import  -/  base-4.9.1.0:Data.IORef c73d02c54df09a5b747108a87da60f73
+import  -/  base-4.9.1.0:GHC.Base 4caea1123ecf4b46e27cbccd6d279377
+import  -/  base-4.9.1.0:GHC.IORef b977a2a1741af520d9defa4a879c1ccf
+import  -/  base-4.9.1.0:GHC.Num 38b8aac8807c096c7f3ca3c1eff02939
+import  -/  base-4.9.1.0:GHC.Real b88ae4a48c079652623073a5bbf5c9b0
+import  -/  base-4.9.1.0:Prelude 74b3e204395920329f6de9d97206abe9
+import  -/  Display f98e93cc79abcce4486dfbe37e9b3572
+  exports: cbcb51275768fa1697fd5e7b434f4d8a
+  display a34652ee1b6c64338367c084f0f15cce
+  idle 9948c858ba83debf26542ab6c0290461
+import  -/  Math.Vector 75eeb9eb9b10c0299ed6cc315c4561d5
+  exports: 51e9f72c030bff90ebfae489a39fc25f
+import  -/  Physics.Gravity 03159c9bd4fe084c98722742b05dc34b
+  exports: 16f3a1591d0772174bea79ce6e3bd9b8
+  Body 6972b5dc968e8bd3d1f24c3c0913f4a6
+9616a81acd1ee917f6d2a06511beda07
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module
+                   Bindings.$trModule2
+                   Bindings.$trModule1) -}
+f9da0c9d3b8eced813780fbf7c2aea0d
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "Bindings"#) -}
+29802293a0c79d96dc72fc3738c717a0
+  $trModule2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "main"#) -}
+49ecf61f23faec0287b98d552705e2f4
+  $wkeyboardMouse ::
+    GHC.IORef.IORef Graphics.GL.Types.GLfloat
+    -> GHC.IORef.IORef
+         (Graphics.GL.Types.GLfloat, Graphics.GL.Types.GLfloat)
+    -> Graphics.UI.GLUT.Callbacks.Window.Key
+    -> Graphics.UI.GLUT.Callbacks.Window.KeyState
+    -> Graphics.Rendering.OpenGL.GL.CoordTrans.Position
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 6, HasNoCafRefs,
+     Strictness: <L,1*U(U)><L,1*U(U)><L,1*U><S,1*U><L,1*H><S,U>,
+     Inline: [0],
+     Unfolding: (\ (w :: GHC.IORef.IORef Graphics.GL.Types.GLfloat)
+                   (w1 :: GHC.IORef.IORef
+                            (Graphics.GL.Types.GLfloat, Graphics.GL.Types.GLfloat))
+                   (w2 :: Graphics.UI.GLUT.Callbacks.Window.Key)
+                   (w3 :: Graphics.UI.GLUT.Callbacks.Window.KeyState)
+                   (w4 :: Graphics.Rendering.OpenGL.GL.CoordTrans.Position)
+                   (w5 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case w3 of wild {
+                   Graphics.UI.GLUT.Callbacks.Window.Down
+                   -> case w4 of wild1 { Graphics.Rendering.OpenGL.GL.CoordTrans.Position dt dt1 ->
+                      case w2 of wild2 {
+                        Graphics.UI.GLUT.Callbacks.Window.Char ds
+                        -> case ds of wild3 { GHC.Types.C# ds1 ->
+                           case ds1 of ds2 {
+                             DEFAULT -> (# w5, GHC.Tuple.() #)
+                             ' '#
+                             -> case w1
+                                       `cast`
+                                     (GHC.IORef.N:IORef[0] <(Graphics.GL.Types.GLfloat,
+                                                             Graphics.GL.Types.GLfloat)>_N) of wild4 { GHC.STRef.STRef r# ->
+                                case GHC.Prim.atomicModifyMutVar#
+                                       @ GHC.Prim.RealWorld
+                                       @ (Graphics.GL.Types.GLfloat, Graphics.GL.Types.GLfloat)
+                                       @ ((Graphics.GL.Types.GLfloat, Graphics.GL.Types.GLfloat),
+                                          ())
+                                       @ ()
+                                       r#
+                                       Bindings.keyboardMouse8
+                                       w5 of ds3 { (#,#) ipv ipv1 ->
+                                case ipv1 of b1 { () -> (# ipv, GHC.Tuple.() #) } } }
+                             '+'#
+                             -> case w `cast`
+                                     (GHC.IORef.N:IORef[0] <GHC.Types.Float>_N) of wild4 { GHC.STRef.STRef r# ->
+                                case GHC.Prim.atomicModifyMutVar#
+                                       @ GHC.Prim.RealWorld
+                                       @ GHC.Types.Float
+                                       @ (GHC.Types.Float, ())
+                                       @ ()
+                                       r#
+                                       Bindings.keyboardMouse7
+                                       w5 of ds3 { (#,#) ipv ipv1 ->
+                                case ipv1 of b1 { () -> (# ipv, GHC.Tuple.() #) } } }
+                             '-'#
+                             -> case w `cast`
+                                     (GHC.IORef.N:IORef[0] <GHC.Types.Float>_N) of wild4 { GHC.STRef.STRef r# ->
+                                case GHC.Prim.atomicModifyMutVar#
+                                       @ GHC.Prim.RealWorld
+                                       @ GHC.Types.Float
+                                       @ (GHC.Types.Float, ())
+                                       @ ()
+                                       r#
+                                       Bindings.keyboardMouse6
+                                       w5 of ds3 { (#,#) ipv ipv1 ->
+                                case ipv1 of b1 { () -> (# ipv, GHC.Tuple.() #) } } } } }
+                        Graphics.UI.GLUT.Callbacks.Window.SpecialKey ds
+                        -> case ds of wild3 {
+                             DEFAULT -> (# w5, GHC.Tuple.() #)
+                             Graphics.UI.GLUT.Callbacks.Window.KeyLeft
+                             -> case w1
+                                       `cast`
+                                     (GHC.IORef.N:IORef[0] <(Graphics.GL.Types.GLfloat,
+                                                             Graphics.GL.Types.GLfloat)>_N) of wild4 { GHC.STRef.STRef r# ->
+                                case GHC.Prim.atomicModifyMutVar#
+                                       @ GHC.Prim.RealWorld
+                                       @ (Graphics.GL.Types.GLfloat, Graphics.GL.Types.GLfloat)
+                                       @ ((Graphics.GL.Types.GLfloat, Graphics.GL.Types.GLfloat),
+                                          ())
+                                       @ ()
+                                       r#
+                                       Bindings.keyboardMouse5
+                                       w5 of ds1 { (#,#) ipv ipv1 ->
+                                case ipv1 of b1 { () -> (# ipv, GHC.Tuple.() #) } } }
+                             Graphics.UI.GLUT.Callbacks.Window.KeyUp
+                             -> case w1
+                                       `cast`
+                                     (GHC.IORef.N:IORef[0] <(Graphics.GL.Types.GLfloat,
+                                                             Graphics.GL.Types.GLfloat)>_N) of wild4 { GHC.STRef.STRef r# ->
+                                case GHC.Prim.atomicModifyMutVar#
+                                       @ GHC.Prim.RealWorld
+                                       @ (Graphics.GL.Types.GLfloat, Graphics.GL.Types.GLfloat)
+                                       @ ((Graphics.GL.Types.GLfloat, Graphics.GL.Types.GLfloat),
+                                          ())
+                                       @ ()
+                                       r#
+                                       Bindings.keyboardMouse4
+                                       w5 of ds1 { (#,#) ipv ipv1 ->
+                                case ipv1 of b1 { () -> (# ipv, GHC.Tuple.() #) } } }
+                             Graphics.UI.GLUT.Callbacks.Window.KeyRight
+                             -> case w1
+                                       `cast`
+                                     (GHC.IORef.N:IORef[0] <(Graphics.GL.Types.GLfloat,
+                                                             Graphics.GL.Types.GLfloat)>_N) of wild4 { GHC.STRef.STRef r# ->
+                                case GHC.Prim.atomicModifyMutVar#
+                                       @ GHC.Prim.RealWorld
+                                       @ (Graphics.GL.Types.GLfloat, Graphics.GL.Types.GLfloat)
+                                       @ ((Graphics.GL.Types.GLfloat, Graphics.GL.Types.GLfloat),
+                                          ())
+                                       @ ()
+                                       r#
+                                       Bindings.keyboardMouse3
+                                       w5 of ds1 { (#,#) ipv ipv1 ->
+                                case ipv1 of b1 { () -> (# ipv, GHC.Tuple.() #) } } }
+                             Graphics.UI.GLUT.Callbacks.Window.KeyDown
+                             -> case w1
+                                       `cast`
+                                     (GHC.IORef.N:IORef[0] <(Graphics.GL.Types.GLfloat,
+                                                             Graphics.GL.Types.GLfloat)>_N) of wild4 { GHC.STRef.STRef r# ->
+                                case GHC.Prim.atomicModifyMutVar#
+                                       @ GHC.Prim.RealWorld
+                                       @ (Graphics.GL.Types.GLfloat, Graphics.GL.Types.GLfloat)
+                                       @ ((Graphics.GL.Types.GLfloat, Graphics.GL.Types.GLfloat),
+                                          ())
+                                       @ ()
+                                       r#
+                                       Bindings.keyboardMouse2
+                                       w5 of ds1 { (#,#) ipv ipv1 ->
+                                case ipv1 of b1 { () -> (# ipv, GHC.Tuple.() #) } } } }
+                        Graphics.UI.GLUT.Callbacks.Window.MouseButton ipv
+                        -> (# w5, GHC.Tuple.() #) } }
+                   Graphics.UI.GLUT.Callbacks.Window.Up
+                   -> (# w5, GHC.Tuple.() #) }) -}
+5681f38992d72b352ec3a022380a3e18
+  keyboardMouse ::
+    GHC.IORef.IORef [Physics.Gravity.Body]
+    -> GHC.IORef.IORef Graphics.GL.Types.GLfloat
+    -> GHC.IORef.IORef
+         (Graphics.GL.Types.GLfloat, Graphics.GL.Types.GLfloat)
+    -> Graphics.UI.GLUT.Callbacks.Window.KeyboardMouseCallback
+  {- Arity: 8, HasNoCafRefs,
+     Strictness: <L,A><L,1*U(U)><L,1*U(U)><L,1*U><S,1*U><L,A><L,1*H><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Bindings.keyboardMouse1
+                  `cast`
+                (<GHC.IORef.IORef [Physics.Gravity.Body]>_R
+                 ->_R <GHC.IORef.IORef Graphics.GL.Types.GLfloat>_R
+                 ->_R <GHC.IORef.IORef
+                         (Graphics.GL.Types.GLfloat, Graphics.GL.Types.GLfloat)>_R
+                 ->_R <Graphics.UI.GLUT.Callbacks.Window.Key>_R
+                 ->_R <Graphics.UI.GLUT.Callbacks.Window.KeyState>_R
+                 ->_R <Graphics.UI.GLUT.Callbacks.Window.Modifiers>_R
+                 ->_R <Graphics.Rendering.OpenGL.GL.CoordTrans.Position>_R
+                 ->_R Sym (GHC.Types.N:IO[0] <()>_R)) -}
+6b31dce25f29b1dfaddd3e6d5279c6eb
+  keyboardMouse1 ::
+    GHC.IORef.IORef [Physics.Gravity.Body]
+    -> GHC.IORef.IORef Graphics.GL.Types.GLfloat
+    -> GHC.IORef.IORef
+         (Graphics.GL.Types.GLfloat, Graphics.GL.Types.GLfloat)
+    -> Graphics.UI.GLUT.Callbacks.Window.Key
+    -> Graphics.UI.GLUT.Callbacks.Window.KeyState
+    -> Graphics.UI.GLUT.Callbacks.Window.Modifiers
+    -> Graphics.Rendering.OpenGL.GL.CoordTrans.Position
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 8, HasNoCafRefs,
+     Strictness: <L,A><L,1*U(U)><L,1*U(U)><L,1*U><S,1*U><L,A><L,1*H><S,U>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (8, True, True)
+                (\ (w :: GHC.IORef.IORef [Physics.Gravity.Body])
+                   (w1 :: GHC.IORef.IORef Graphics.GL.Types.GLfloat)
+                   (w2 :: GHC.IORef.IORef
+                            (Graphics.GL.Types.GLfloat, Graphics.GL.Types.GLfloat))
+                   (w3 :: Graphics.UI.GLUT.Callbacks.Window.Key)
+                   (w4 :: Graphics.UI.GLUT.Callbacks.Window.KeyState)
+                   (w5 :: Graphics.UI.GLUT.Callbacks.Window.Modifiers)
+                   (w6 :: Graphics.Rendering.OpenGL.GL.CoordTrans.Position)
+                   (w7 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 Bindings.$wkeyboardMouse w1 w2 w3 w4 w6 w7) -}
+fc99dd8b3424fd2b0492ce44f8217053
+  keyboardMouse10 :: (GHC.Types.Float, GHC.Types.Float)
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: ((Bindings.keyboardMouse11,
+                  Bindings.keyboardMouse11)) -}
+a721c2f54f1c8d01cc03cf20d26bf55d
+  keyboardMouse11 :: GHC.Types.Float
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.F# 0.0#) -}
+c7e989648162ea46564c33a2496a1369
+  keyboardMouse2 ::
+    (Graphics.GL.Types.GLfloat, Graphics.GL.Types.GLfloat)
+    -> ((Graphics.GL.Types.GLfloat, Graphics.GL.Types.GLfloat), ())
+  {- Arity: 1, HasNoCafRefs,
+     Unfolding: (\ (a1 :: (Graphics.GL.Types.GLfloat,
+                           Graphics.GL.Types.GLfloat)) ->
+                 case a1 of wild { (,) x y ->
+                 ((x,
+                   case y of wild1 { GHC.Types.F# x1 ->
+                   GHC.Types.F# (GHC.Prim.plusFloat# x1 0.1#) }),
+                  GHC.Tuple.()) }) -}
+4b98b4be130910b3b65f6c7872b2fa8b
+  keyboardMouse3 ::
+    (Graphics.GL.Types.GLfloat, Graphics.GL.Types.GLfloat)
+    -> ((Graphics.GL.Types.GLfloat, Graphics.GL.Types.GLfloat), ())
+  {- Arity: 1, HasNoCafRefs,
+     Unfolding: (\ (a1 :: (Graphics.GL.Types.GLfloat,
+                           Graphics.GL.Types.GLfloat)) ->
+                 case a1 of wild { (,) x y ->
+                 ((case x of wild1 { GHC.Types.F# x1 ->
+                   GHC.Types.F# (GHC.Prim.minusFloat# x1 0.1#) },
+                   y),
+                  GHC.Tuple.()) }) -}
+f2a3cdf608ed6ed7729f911def9e389a
+  keyboardMouse4 ::
+    (Graphics.GL.Types.GLfloat, Graphics.GL.Types.GLfloat)
+    -> ((Graphics.GL.Types.GLfloat, Graphics.GL.Types.GLfloat), ())
+  {- Arity: 1, HasNoCafRefs,
+     Unfolding: (\ (a1 :: (Graphics.GL.Types.GLfloat,
+                           Graphics.GL.Types.GLfloat)) ->
+                 case a1 of wild { (,) x y ->
+                 ((x,
+                   case y of wild1 { GHC.Types.F# x1 ->
+                   GHC.Types.F# (GHC.Prim.minusFloat# x1 0.1#) }),
+                  GHC.Tuple.()) }) -}
+8d71ed4f1c0b19982562337a5c2bbc80
+  keyboardMouse5 ::
+    (Graphics.GL.Types.GLfloat, Graphics.GL.Types.GLfloat)
+    -> ((Graphics.GL.Types.GLfloat, Graphics.GL.Types.GLfloat), ())
+  {- Arity: 1, HasNoCafRefs,
+     Unfolding: (\ (a1 :: (Graphics.GL.Types.GLfloat,
+                           Graphics.GL.Types.GLfloat)) ->
+                 case a1 of wild { (,) x y ->
+                 ((case x of wild1 { GHC.Types.F# x1 ->
+                   GHC.Types.F# (GHC.Prim.plusFloat# x1 0.1#) },
+                   y),
+                  GHC.Tuple.()) }) -}
+e66a72922203d7bb07be004767dd9e71
+  keyboardMouse6 :: GHC.Types.Float -> (GHC.Types.Float, ())
+  {- Arity: 1, HasNoCafRefs,
+     Unfolding: (\ (a1 :: GHC.Types.Float) ->
+                 case a1 of wild { GHC.Types.F# x ->
+                 (GHC.Types.F# (GHC.Prim.divideFloat# x 2.0#), GHC.Tuple.()) }) -}
+ceca9c6d671227e68cd4471292c75d55
+  keyboardMouse7 :: GHC.Types.Float -> (GHC.Types.Float, ())
+  {- Arity: 1, HasNoCafRefs,
+     Unfolding: (\ (a1 :: GHC.Types.Float) ->
+                 case a1 of wild { GHC.Types.F# x ->
+                 (GHC.Types.F# (GHC.Prim.plusFloat# x x), GHC.Tuple.()) }) -}
+8a8e76a78df1fe80cfddf3f66742e891
+  keyboardMouse8 ::
+    (Graphics.GL.Types.GLfloat, Graphics.GL.Types.GLfloat)
+    -> ((Graphics.GL.Types.GLfloat, Graphics.GL.Types.GLfloat), ())
+  {- Arity: 1, HasNoCafRefs,
+     Unfolding: (\ (a1 :: (Graphics.GL.Types.GLfloat,
+                           Graphics.GL.Types.GLfloat)) ->
+                 case a1 of wild { (,) x y -> Bindings.keyboardMouse9 }) -}
+10f7df5d4137419e9dc99ab4c20e7ea3
+  keyboardMouse9 ::
+    ((Graphics.GL.Types.GLfloat, Graphics.GL.Types.GLfloat), ())
+  {- HasNoCafRefs,
+     Unfolding: ((Bindings.keyboardMouse10, GHC.Tuple.())) -}
+b75f57007221bb0f2e909c96136f1818
+  reshape :: Graphics.UI.GLUT.Callbacks.Window.ReshapeCallback
+  {- Arity: 2, Strictness: <S(SS),1*U(U,U)><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Bindings.reshape1
+                  `cast`
+                (<Graphics.Rendering.OpenGL.GL.CoordTrans.Size>_R
+                 ->_R Sym (GHC.Types.N:IO[0] <()>_R)) -}
+3f89c0c57f299ab8e7db554763751b04
+  reshape1 ::
+    Graphics.Rendering.OpenGL.GL.CoordTrans.Size
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 2, Strictness: <S(SS),1*U(U,U)><S,U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (size :: Graphics.Rendering.OpenGL.GL.CoordTrans.Size)
+                   (eta :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case size of ww6 { Graphics.Rendering.OpenGL.GL.CoordTrans.Size ww7 ww8 ->
+                 case Graphics.GL.Functions.F31.ptr_glViewport of ds5 { GHC.Ptr.FunPtr ds6 ->
+                 case {__dyn_ccall_GC "" GHC.Prim.Addr#
+                                         -> GHC.Prim.Int#
+                                         -> GHC.Prim.Int#
+                                         -> GHC.Prim.Int#
+                                         -> GHC.Prim.Int#
+                                         -> GHC.Prim.State# GHC.Prim.RealWorld
+                                         -> (# GHC.Prim.State# GHC.Prim.RealWorld #)}
+                        ds6
+                        0#
+                        0#
+                        ww7
+                        ww8
+                        eta of wild { Unit# ds15 ->
+                 (# ds15, GHC.Tuple.() #) } } }) -}
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: none
+require own pkg trusted: False
+

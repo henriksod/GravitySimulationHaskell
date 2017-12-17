@@ -1,0 +1,715 @@
+
+==================== FINAL INTERFACE ====================
+2017-06-02 08:42:15.2080318 UTC
+
+interface main@main:Math.Vector 8002
+  interface hash: 0fee8135de375d48cb56b56f3f518eb0
+  ABI hash: 75eeb9eb9b10c0299ed6cc315c4561d5
+  export-list hash: 51e9f72c030bff90ebfae489a39fc25f
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: 33926cab301c1276610e9a37f6811916
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Math.Vector.cross
+  Math.Vector.dist
+  Math.Vector.dot
+  Math.Vector.minus
+  Math.Vector.plus
+  Math.Vector.scale
+  Math.Vector.unit
+  Math.Vector.vecLength
+  Math.Vector.zero
+  Math.Vector.Vector{Math.Vector.Vector Math.Vector.Vector2 Math.Vector.Vector3}
+module dependencies:
+package dependencies: base-4.9.1.0* ghc-prim-0.5.0.0
+                      integer-gmp-1.0.0.1
+orphans: base-4.9.1.0:GHC.Base base-4.9.1.0:GHC.Float
+family instance modules: base-4.9.1.0:Control.Applicative
+                         base-4.9.1.0:Data.Either base-4.9.1.0:Data.Functor.Const
+                         base-4.9.1.0:Data.Monoid base-4.9.1.0:Data.Type.Equality
+                         base-4.9.1.0:GHC.Generics base-4.9.1.0:GHC.IO.Exception
+                         base-4.9.1.0:GHC.TypeLits
+import  -/  base-4.9.1.0:Data.Foldable 254e836c2d813d34e47feb29bb8d40ed
+import  -/  base-4.9.1.0:GHC.Base 4caea1123ecf4b46e27cbccd6d279377
+import  -/  base-4.9.1.0:GHC.Float b620368aab866c2bb9d3a0a459566b84
+import  -/  base-4.9.1.0:GHC.List d11eb227c1c6fbfd89bb781d72eaea0d
+import  -/  base-4.9.1.0:GHC.Num 38b8aac8807c096c7f3ca3c1eff02939
+import  -/  base-4.9.1.0:GHC.Real b88ae4a48c079652623073a5bbf5c9b0
+import  -/  base-4.9.1.0:GHC.Show eca5834daba3b6a2bbbe64ab52056707
+import  -/  base-4.9.1.0:Prelude 74b3e204395920329f6de9d97206abe9
+import  -/  ghc-prim-0.5.0.0:GHC.Classes 16d48e012d23eaef9bca91ccdd572c02
+6d591394e3f5a694a629c053b83b1df3
+  $fEqVector ::
+    (GHC.Classes.Eq a, GHC.Num.Num a) =>
+    GHC.Classes.Eq (Math.Vector.Vector a)
+  DFunId
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,U(C(C1(U)),A)><L,A>m,
+     Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun: @ a
+                      ($dEq :: GHC.Classes.Eq a)
+                      ($dNum :: GHC.Num.Num a).
+                  @ (Math.Vector.Vector a)
+                  (Math.Vector.$fEqVector_$c== @ a $dEq $dNum)
+                  (Math.Vector.$fEqVector_$c/= @ a $dEq $dNum) -}
+6d591394e3f5a694a629c053b83b1df3
+  $fEqVector_$c/= ::
+    (GHC.Classes.Eq a, GHC.Num.Num a) =>
+    Math.Vector.Vector a -> Math.Vector.Vector a -> GHC.Types.Bool
+  {- Arity: 4, HasNoCafRefs,
+     Strictness: <L,U(C(C1(U)),A)><L,A><S,1*U><S,1*U>,
+     Unfolding: InlineRule (4, True, False)
+                (\ @ a
+                   ($dEq :: GHC.Classes.Eq a)
+                   ($dNum :: GHC.Num.Num a)
+                   (a1 :: Math.Vector.Vector a)
+                   (b :: Math.Vector.Vector a) ->
+                 case Math.Vector.$fEqVector_$c== @ a $dEq $dNum a1 b of wild {
+                   GHC.Types.False -> GHC.Types.True
+                   GHC.Types.True -> GHC.Types.False }) -}
+6d591394e3f5a694a629c053b83b1df3
+  $fEqVector_$c== ::
+    (GHC.Classes.Eq a, GHC.Num.Num a) =>
+    Math.Vector.Vector a -> Math.Vector.Vector a -> GHC.Types.Bool
+  {- Arity: 4, HasNoCafRefs,
+     Strictness: <L,U(C(C1(U)),A)><L,A><S,1*U><S,1*U>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (4, True, True)
+                (\ @ a
+                   (w :: GHC.Classes.Eq a)
+                   (w1 :: GHC.Num.Num a)
+                   (w2 :: Math.Vector.Vector a)
+                   (w3 :: Math.Vector.Vector a) ->
+                 Math.Vector.$w$c== @ a w w2 w3) -}
+6d591394e3f5a694a629c053b83b1df3
+  $fShowVector ::
+    (GHC.Show.Show a, GHC.Num.Num a) =>
+    GHC.Show.Show (Math.Vector.Vector a)
+  DFunId
+  {- Arity: 2, Strictness: <L,U(C(C1(U)),A,C(U))><L,A>m,
+     Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun: @ a
+                      ($dShow :: GHC.Show.Show a)
+                      ($dNum :: GHC.Num.Num a).
+                  @ (Math.Vector.Vector a)
+                  (Math.Vector.$fShowVector_$cshowsPrec @ a $dShow $dNum)
+                  (Math.Vector.$fShowVector_$cshow @ a $dShow $dNum)
+                  (Math.Vector.$fShowVector_$cshowList @ a $dShow $dNum) -}
+274140df1af5bdfa15236e5c120b4f85
+  $fShowVector1 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 0#) -}
+8430d655794573558167b8a5289fb474
+  $fShowVector2 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "Vector2 "#) -}
+bdd385200583f536a3df1d4020f81fd0
+  $fShowVector3 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "Vector3 "#) -}
+b2c506656f698a79aa64e2a975b7e92c
+  $fShowVector4 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 11#) -}
+772196a83f687cf30d25ad5d9658aed9
+  $fShowVector5 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "Vector "#) -}
+6d591394e3f5a694a629c053b83b1df3
+  $fShowVector_$cshow ::
+    (GHC.Show.Show a, GHC.Num.Num a) =>
+    Math.Vector.Vector a -> GHC.Base.String
+  {- Arity: 3, Strictness: <L,U(C(C1(U)),A,C(U))><L,A><S,1*U>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ a
+                   ($dShow :: GHC.Show.Show a)
+                   ($dNum :: GHC.Num.Num a)
+                   (x :: Math.Vector.Vector a) ->
+                 Math.Vector.$fShowVector_$cshowsPrec
+                   @ a
+                   $dShow
+                   $dNum
+                   GHC.Show.shows22
+                   x
+                   (GHC.Types.[] @ GHC.Types.Char)) -}
+6d591394e3f5a694a629c053b83b1df3
+  $fShowVector_$cshowList ::
+    (GHC.Show.Show a, GHC.Num.Num a) =>
+    [Math.Vector.Vector a] -> GHC.Show.ShowS
+  {- Arity: 4, Strictness: <L,U(C(C1(U)),A,C(U))><L,A><S,1*U><L,U>,
+     Unfolding: InlineRule (4, True, False)
+                (\ @ a
+                   ($dShow :: GHC.Show.Show a)
+                   ($dNum :: GHC.Num.Num a)
+                   (eta :: [Math.Vector.Vector a])
+                   (eta1 :: GHC.Base.String) ->
+                 GHC.Show.showList__
+                   @ (Math.Vector.Vector a)
+                   (Math.Vector.$fShowVector_$cshowsPrec
+                      @ a
+                      $dShow
+                      $dNum
+                      Math.Vector.$fShowVector1)
+                   eta
+                   eta1) -}
+6d591394e3f5a694a629c053b83b1df3
+  $fShowVector_$cshowsPrec ::
+    (GHC.Show.Show a, GHC.Num.Num a) =>
+    GHC.Types.Int -> Math.Vector.Vector a -> GHC.Show.ShowS
+  {- Arity: 4,
+     Strictness: <L,U(C(C1(U)),A,1*C1(U))><L,A><S(S),1*U(U)><S,1*U>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (4, True, False)
+                (\ @ a
+                   (w :: GHC.Show.Show a)
+                   (w1 :: GHC.Num.Num a)
+                   (w2 :: GHC.Types.Int)
+                   (w3 :: Math.Vector.Vector a) ->
+                 case w2 of ww { GHC.Types.I# ww1 ->
+                 Math.Vector.$w$cshowsPrec @ a w ww1 w3 }) -}
+aa5cfbc1978e47919d4c1247564a0f8c
+  $tc'Vector :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   10110287924041374185##
+                   9696434850738163335##
+                   Math.Vector.$trModule
+                   Math.Vector.$tc'Vector1) -}
+60b7766c3f6bf025db92957a19224ee2
+  $tc'Vector1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'Vector"#) -}
+d8ce68015e0647616206999bb256c5eb
+  $tc'Vector2 :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   1046766439052556467##
+                   2490968629177333042##
+                   Math.Vector.$trModule
+                   Math.Vector.$tc'Vector5) -}
+221a5a025623b06d44f9e136b5d039f5
+  $tc'Vector3 :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   16272409855609503788##
+                   10524547317620789144##
+                   Math.Vector.$trModule
+                   Math.Vector.$tc'Vector6) -}
+419a3ad430139b8ae6a32a26a25a131d
+  $tc'Vector5 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'Vector2"#) -}
+1e1fe36c8be02415de2af02370a30453
+  $tc'Vector6 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'Vector3"#) -}
+9644bef1f5f03541b20a94fc7a809b7d
+  $tcVector :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   17804449868892805260##
+                   15471621859725546049##
+                   Math.Vector.$trModule
+                   Math.Vector.$tcVector1) -}
+f0404ee9cb4e8eb51f04afaa7f2bc7a9
+  $tcVector1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "Vector"#) -}
+81cc1b5b48a4af7624feaaacb7bbf5bf
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module
+                   Math.Vector.$trModule2
+                   Math.Vector.$trModule1) -}
+bfcae78fb2391e6472a96dac1a611ead
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "Math.Vector"#) -}
+288fce7ebf0ea904e9eee8e01c0b54ce
+  $trModule2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "main"#) -}
+6d591394e3f5a694a629c053b83b1df3
+  $w$c== ::
+    GHC.Classes.Eq a =>
+    Math.Vector.Vector a -> Math.Vector.Vector a -> GHC.Types.Bool
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <L,U(C(C1(U)),A)><S,1*U><S,1*U>, Inline: [0],
+     Unfolding: (\ @ a
+                   (w :: GHC.Classes.Eq a)
+                   (w1 :: Math.Vector.Vector a)
+                   (w2 :: Math.Vector.Vector a) ->
+                 case w1 of wild {
+                   Math.Vector.Vector a1
+                   -> case w2 of wild1 {
+                        DEFAULT -> GHC.Types.False
+                        Math.Vector.Vector b1 -> GHC.Classes.$fEq[]_$c== @ a w a1 b1 }
+                   Math.Vector.Vector3 a1 a2 a3
+                   -> case w2 of wild1 {
+                        DEFAULT -> GHC.Types.False
+                        Math.Vector.Vector3 b1 b2 b3
+                        -> case GHC.Classes.== @ a w a1 b1 of wild2 {
+                             GHC.Types.False -> GHC.Types.False
+                             GHC.Types.True
+                             -> case GHC.Classes.== @ a w a2 b2 of wild3 {
+                                  GHC.Types.False -> GHC.Types.False
+                                  GHC.Types.True -> GHC.Classes.== @ a w a3 b3 } } }
+                   Math.Vector.Vector2 a1 a2
+                   -> case w2 of wild1 {
+                        DEFAULT -> GHC.Types.False
+                        Math.Vector.Vector2 b1 b2
+                        -> case GHC.Classes.== @ a w a1 b1 of wild2 {
+                             GHC.Types.False -> GHC.Types.False
+                             GHC.Types.True -> GHC.Classes.== @ a w a2 b2 } } }) -}
+6d591394e3f5a694a629c053b83b1df3
+  $w$cshowsPrec ::
+    GHC.Show.Show a =>
+    GHC.Prim.Int# -> Math.Vector.Vector a -> GHC.Show.ShowS
+  {- Arity: 3, Strictness: <L,U(C(C1(U)),A,1*C1(U))><S,U><S,1*U>,
+     Inline: [0],
+     Unfolding: (\ @ a
+                   (w :: GHC.Show.Show a)
+                   (ww :: GHC.Prim.Int#)
+                   (w1 :: Math.Vector.Vector a) ->
+                 case w1 of wild {
+                   Math.Vector.Vector b1
+                   -> let {
+                        g :: GHC.Base.String -> GHC.Base.String
+                        = GHC.Show.showList @ a w b1
+                      } in
+                      case GHC.Prim.tagToEnum#
+                             @ GHC.Types.Bool
+                             (GHC.Prim.>=# ww 11#) of wild1 {
+                        GHC.Types.False
+                        -> \ (x :: GHC.Base.String) ->
+                           GHC.Base.++ @ GHC.Types.Char Math.Vector.$fShowVector5 (g x)
+                        GHC.Types.True
+                        -> \ (x :: GHC.Base.String) ->
+                           GHC.Types.:
+                             @ GHC.Types.Char
+                             GHC.Show.shows7
+                             (GHC.Base.++
+                                @ GHC.Types.Char
+                                Math.Vector.$fShowVector5
+                                (g (GHC.Types.: @ GHC.Types.Char GHC.Show.shows4 x))) }
+                   Math.Vector.Vector3 b1 b2 b3
+                   -> let {
+                        f :: GHC.Base.String -> GHC.Base.String
+                        = GHC.Show.showsPrec @ a w Math.Vector.$fShowVector4 b1
+                      } in
+                      let {
+                        f1 :: GHC.Base.String -> GHC.Base.String
+                        = GHC.Show.showsPrec @ a w Math.Vector.$fShowVector4 b2
+                      } in
+                      let {
+                        g :: GHC.Base.String -> GHC.Base.String
+                        = GHC.Show.showsPrec @ a w Math.Vector.$fShowVector4 b3
+                      } in
+                      let {
+                        p :: GHC.Show.ShowS {- Arity: 1, Strictness: <L,U> -}
+                        = \ (x :: GHC.Base.String) ->
+                          GHC.Base.++
+                            @ GHC.Types.Char
+                            Math.Vector.$fShowVector3
+                            (f (GHC.Types.:
+                                  @ GHC.Types.Char
+                                  GHC.Show.showSpace1
+                                  (f1 (GHC.Types.: @ GHC.Types.Char GHC.Show.showSpace1 (g x)))))
+                      } in
+                      case GHC.Prim.tagToEnum#
+                             @ GHC.Types.Bool
+                             (GHC.Prim.>=# ww 11#) of wild1 {
+                        GHC.Types.False -> p
+                        GHC.Types.True
+                        -> \ (x :: GHC.Base.String) ->
+                           GHC.Types.:
+                             @ GHC.Types.Char
+                             GHC.Show.shows7
+                             (p (GHC.Types.: @ GHC.Types.Char GHC.Show.shows4 x)) }
+                   Math.Vector.Vector2 b1 b2
+                   -> let {
+                        f :: GHC.Base.String -> GHC.Base.String
+                        = GHC.Show.showsPrec @ a w Math.Vector.$fShowVector4 b1
+                      } in
+                      let {
+                        g :: GHC.Base.String -> GHC.Base.String
+                        = GHC.Show.showsPrec @ a w Math.Vector.$fShowVector4 b2
+                      } in
+                      case GHC.Prim.tagToEnum#
+                             @ GHC.Types.Bool
+                             (GHC.Prim.>=# ww 11#) of wild1 {
+                        GHC.Types.False
+                        -> \ (x :: GHC.Base.String) ->
+                           GHC.Base.++
+                             @ GHC.Types.Char
+                             Math.Vector.$fShowVector2
+                             (f (GHC.Types.: @ GHC.Types.Char GHC.Show.showSpace1 (g x)))
+                        GHC.Types.True
+                        -> \ (x :: GHC.Base.String) ->
+                           GHC.Types.:
+                             @ GHC.Types.Char
+                             GHC.Show.shows7
+                             (GHC.Base.++
+                                @ GHC.Types.Char
+                                Math.Vector.$fShowVector2
+                                (f (GHC.Types.:
+                                      @ GHC.Types.Char
+                                      GHC.Show.showSpace1
+                                      (g (GHC.Types.:
+                                            @ GHC.Types.Char
+                                            GHC.Show.shows4
+                                            x))))) } }) -}
+656bcb4e7c90f97ce47c1b7ac2c74f11
+  $wdist ::
+    GHC.Float.Floating a =>
+    Math.Vector.Vector a -> Math.Vector.Vector a -> a
+  {- Arity: 3,
+     Strictness: <S(LLLLC(S)LLLLLLLLLLLLLLLLLL),U(1*U,A,A,A,1*C1(U),C(C1(U)),A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A)><S,1*U><S,1*U>,
+     Inline: [0] -}
+dacf91788bb92ec8a6af0a91314482ef
+  $wscale ::
+    GHC.Real.Fractional a =>
+    Math.Vector.Vector a -> a -> Math.Vector.Vector a
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <L,1*U(1*U,A,A,A)><S,1*U><L,U>, Inline: [0],
+     Unfolding: (\ @ a
+                   (w :: GHC.Real.Fractional a)
+                   (w1 :: Math.Vector.Vector a)
+                   (w2 :: a) ->
+                 let {
+                   $dNum :: GHC.Num.Num a = GHC.Real.$p1Fractional @ a w
+                 } in
+                 case w1 of wild {
+                   Math.Vector.Vector a1
+                   -> Math.Vector.Vector
+                        @ a
+                        (GHC.Base.map
+                           @ a
+                           @ a
+                           (\ (ds :: a) -> GHC.Num.* @ a $dNum ds w2)
+                           a1)
+                   Math.Vector.Vector3 i j k
+                   -> Math.Vector.Vector3
+                        @ a
+                        (GHC.Num.* @ a $dNum i w2)
+                        (GHC.Num.* @ a $dNum j w2)
+                        (GHC.Num.* @ a $dNum k w2)
+                   Math.Vector.Vector2 i j
+                   -> Math.Vector.Vector2
+                        @ a
+                        (GHC.Num.* @ a $dNum i w2)
+                        (GHC.Num.* @ a $dNum j w2) }) -}
+bcb488e15611e85a4ef415090a7b1805
+  $wunit ::
+    (GHC.Real.Fractional a, GHC.Float.Floating a) =>
+    Math.Vector.Vector a
+    -> Math.Vector.Vector a -> Math.Vector.Vector a
+  {- Arity: 4,
+     Strictness: <L,1*U(1*U,A,A,A)><L,U(U,A,A,A,C(U),C(C1(U)),A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A)><S,U><S,U>,
+     Inline: [0],
+     Unfolding: (\ @ a
+                   (w :: GHC.Real.Fractional a)
+                   (w1 :: GHC.Float.Floating a)
+                   (w2 :: Math.Vector.Vector a)
+                   (w3 :: Math.Vector.Vector a) ->
+                 let {
+                   $dNum :: GHC.Num.Num a = GHC.Real.$p1Fractional @ a w
+                 } in
+                 let {
+                   $dFractional :: GHC.Real.Fractional a
+                   = GHC.Float.$p1Floating @ a w1
+                 } in
+                 Math.Vector.$wscale
+                   @ a
+                   $dFractional
+                   (Math.Vector.minus @ a $dNum w3 w2)
+                   (GHC.Real./
+                      @ a
+                      $dFractional
+                      (GHC.Num.fromInteger @ a $dNum Math.Vector.unit1)
+                      (Math.Vector.$wdist @ a w1 w2 w3))) -}
+96acf22833ec7da1512ba91eb9fd5aa4
+  $wvecLength :: GHC.Float.Floating a => Math.Vector.Vector a -> a
+  {- Arity: 2,
+     Strictness: <S(LLLLC(S)LLLLLLLLLLLLLLLLLL),U(1*U,A,A,A,1*C1(U),C(C1(U)),A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A)><S,1*U>,
+     Inline: [0],
+     Unfolding: (\ @ a
+                   (w :: GHC.Float.Floating a)
+                   (w1 :: Math.Vector.Vector a) ->
+                 case w1 of wild {
+                   DEFAULT -> Math.Vector.vecLength2 @ a
+                   Math.Vector.Vector v
+                   -> GHC.Float.sqrt
+                        @ a
+                        w
+                        (let {
+                           $dFractional :: GHC.Real.Fractional a = GHC.Float.$p1Floating @ a w
+                         } in
+                         let {
+                           $dNum :: GHC.Num.Num a = GHC.Real.$p1Fractional @ a $dFractional
+                         } in
+                         let {
+                           k :: a -> a -> a = GHC.Num.+ @ a $dNum
+                         } in
+                         let {
+                           ds :: a = GHC.Num.fromInteger @ a $dNum Math.Vector.vecLength1
+                         } in
+                         letrec {
+                           go :: [a] -> a -> a {- Arity: 2, Strictness: <S,1*U><L,U> -}
+                           = \ (ds1 :: [a]) (eta :: a) ->
+                             case ds1 of wild1 {
+                               [] -> eta : y ys -> go ys (k eta (GHC.Float.** @ a w y ds)) }
+                         } in
+                         go v (GHC.Num.fromInteger @ a $dNum Math.Vector.dot1)) }) -}
+e4dace9a0ce53d4d9bd14187aff2fa17
+  $wzero :: GHC.Num.Num a => GHC.Types.Int -> (# [a] #)
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <L,1*U(A,A,A,A,A,A,1*C1(U))><L,1*U(U)>, Inline: [0],
+     Unfolding: (\ @ a (w :: GHC.Num.Num a) (w1 :: GHC.Types.Int) ->
+                 (# case w1 of wild1 { GHC.Types.I# y ->
+                    case GHC.Prim.tagToEnum#
+                           @ GHC.Types.Bool
+                           (GHC.Prim.<# 0# y) of wild {
+                      GHC.Types.False -> GHC.Types.[] @ a
+                      GHC.Types.True
+                      -> let {
+                           x :: a = GHC.Num.fromInteger @ a w Math.Vector.dot1
+                         } in
+                         let {
+                           lvl2 :: [a] = GHC.Types.: @ a x (GHC.Types.[] @ a)
+                         } in
+                         letrec {
+                           $wxs :: GHC.Prim.Int# -> [a]
+                             {- Arity: 1, Strictness: <S,1*U>, Inline: [0] -}
+                           = \ (ww :: GHC.Prim.Int#) ->
+                             case ww of ds1 {
+                               DEFAULT -> GHC.Types.: @ a x ($wxs (GHC.Prim.-# ds1 1#))
+                               1# -> lvl2 }
+                         } in
+                         $wxs y } } #)) -}
+6d591394e3f5a694a629c053b83b1df3
+  type role Vector nominal
+  data GHC.Num.Num a => Vector a
+    = Vector [a] | Vector3 a a a | Vector2 a a
+aa1b967b58bb4f3ab26615a5e9e5566b
+  cross ::
+    GHC.Num.Num a =>
+    Math.Vector.Vector a
+    -> Math.Vector.Vector a -> GHC.Base.Maybe (Math.Vector.Vector a)
+  {- Arity: 3,
+     Strictness: <L,U(C(C1(U)),C(C1(U)),C(C1(U)),A,A,A,C(U))><S,1*U><S,1*U> -}
+1c56cce7c0cde4f76e53b8442ece2466
+  dist ::
+    (GHC.Num.Num a, GHC.Float.Floating a) =>
+    Math.Vector.Vector a -> Math.Vector.Vector a -> a
+  {- Arity: 4,
+     Strictness: <L,A><S(LLLLC(S)LLLLLLLLLLLLLLLLLL),U(1*U,A,A,A,1*C1(U),C(C1(U)),A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A)><S,1*U><S,1*U>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (4, True, True)
+                (\ @ a
+                   (w :: GHC.Num.Num a)
+                   (w1 :: GHC.Float.Floating a)
+                   (w2 :: Math.Vector.Vector a)
+                   (w3 :: Math.Vector.Vector a) ->
+                 Math.Vector.$wdist @ a w1 w2 w3) -}
+60a25b679695f9af88ba24e12c8c93d5
+  dot ::
+    GHC.Num.Num a => Math.Vector.Vector a -> Math.Vector.Vector a -> a
+  {- Arity: 3, Strictness: <L,U(U,A,U,A,A,A,1*C1(U))><S,1*U><S,1*U>,
+     Unfolding: (\ @ a
+                   ($dNum :: GHC.Num.Num a)
+                   (ds :: Math.Vector.Vector a)
+                   (ds1 :: Math.Vector.Vector a) ->
+                 case ds of wild {
+                   Math.Vector.Vector a1
+                   -> case ds1 of wild1 {
+                        DEFAULT -> Math.Vector.dot2 @ a
+                        Math.Vector.Vector b
+                        -> let {
+                             k :: a -> a -> a = GHC.Num.+ @ a $dNum
+                           } in
+                           let {
+                             f :: a -> a -> a = GHC.Num.* @ a $dNum
+                           } in
+                           letrec {
+                             go :: [a] -> [a] -> a -> a
+                               {- Arity: 3, Strictness: <S,1*U><L,1*U><L,U> -}
+                             = \ (ds2 :: [a]) (_ys :: [a]) (eta :: a) ->
+                               case ds2 of wild2 {
+                                 [] -> eta
+                                 : ipv ipv1
+                                 -> case _ys of wild3 {
+                                      [] -> eta : ipv2 ipv3 -> go ipv1 ipv3 (k eta (f ipv ipv2)) } }
+                           } in
+                           go a1 b (GHC.Num.fromInteger @ a $dNum Math.Vector.dot1) }
+                   Math.Vector.Vector3 i j k
+                   -> case ds1 of wild1 {
+                        DEFAULT -> Math.Vector.dot2 @ a
+                        Math.Vector.Vector3 l m n
+                        -> GHC.Num.+
+                             @ a
+                             $dNum
+                             (GHC.Num.+
+                                @ a
+                                $dNum
+                                (GHC.Num.* @ a $dNum i l)
+                                (GHC.Num.* @ a $dNum j m))
+                             (GHC.Num.* @ a $dNum k n) }
+                   Math.Vector.Vector2 i j
+                   -> case ds1 of wild1 {
+                        DEFAULT -> Math.Vector.dot2 @ a
+                        Math.Vector.Vector2 l m
+                        -> GHC.Num.+
+                             @ a
+                             $dNum
+                             (GHC.Num.* @ a $dNum i l)
+                             (GHC.Num.* @ a $dNum j m) } }) -}
+e315f6bed531b4ec54839a6507b72935
+  dot1 :: GHC.Integer.Type.Integer
+  {- HasNoCafRefs, Unfolding: (0) -}
+0977b03dedd87a7026b0297a86d0deb9
+  dot2 :: a
+  {- Strictness: x -}
+e8d3fb0e2bbbd45a7dbdfb8e0d352db9
+  minus ::
+    GHC.Num.Num a =>
+    Math.Vector.Vector a
+    -> Math.Vector.Vector a -> Math.Vector.Vector a
+  {- Arity: 3, Strictness: <L,U(A,C(C1(U)),A,A,A,A,A)><S,1*U><S,1*U>,
+     Unfolding: (\ @ a
+                   ($dNum :: GHC.Num.Num a)
+                   (ds :: Math.Vector.Vector a)
+                   (ds1 :: Math.Vector.Vector a) ->
+                 case ds of wild {
+                   Math.Vector.Vector a1
+                   -> case ds1 of wild1 {
+                        DEFAULT -> Math.Vector.minus1 @ a
+                        Math.Vector.Vector b
+                        -> Math.Vector.Vector
+                             @ a
+                             (GHC.List.zipWith @ a @ a @ a (GHC.Num.- @ a $dNum) a1 b) }
+                   Math.Vector.Vector3 i j k
+                   -> case ds1 of wild1 {
+                        DEFAULT -> Math.Vector.minus1 @ a
+                        Math.Vector.Vector3 l m n
+                        -> Math.Vector.Vector3
+                             @ a
+                             (GHC.Num.- @ a $dNum i l)
+                             (GHC.Num.- @ a $dNum j m)
+                             (GHC.Num.- @ a $dNum k n) }
+                   Math.Vector.Vector2 i j
+                   -> case ds1 of wild1 {
+                        DEFAULT -> Math.Vector.minus1 @ a
+                        Math.Vector.Vector2 l m
+                        -> Math.Vector.Vector2
+                             @ a
+                             (GHC.Num.- @ a $dNum i l)
+                             (GHC.Num.- @ a $dNum j m) } }) -}
+32ab74dd9da1ef7610e1b32ac19fcd97
+  minus1 :: Math.Vector.Vector a
+  {- Strictness: x -}
+c5acd0532d271cf39c17c9cbb20161e4
+  plus ::
+    GHC.Num.Num a =>
+    Math.Vector.Vector a
+    -> Math.Vector.Vector a -> Math.Vector.Vector a
+  {- Arity: 3, Strictness: <L,U(C(C1(U)),A,A,A,A,A,A)><S,1*U><S,1*U>,
+     Unfolding: (\ @ a
+                   ($dNum :: GHC.Num.Num a)
+                   (ds :: Math.Vector.Vector a)
+                   (ds1 :: Math.Vector.Vector a) ->
+                 case ds of wild {
+                   Math.Vector.Vector a1
+                   -> case ds1 of wild1 {
+                        DEFAULT -> Math.Vector.plus1 @ a
+                        Math.Vector.Vector b
+                        -> Math.Vector.Vector
+                             @ a
+                             (GHC.List.zipWith @ a @ a @ a (GHC.Num.+ @ a $dNum) a1 b) }
+                   Math.Vector.Vector3 i j k
+                   -> case ds1 of wild1 {
+                        DEFAULT -> Math.Vector.plus1 @ a
+                        Math.Vector.Vector3 l m n
+                        -> Math.Vector.Vector3
+                             @ a
+                             (GHC.Num.+ @ a $dNum i l)
+                             (GHC.Num.+ @ a $dNum j m)
+                             (GHC.Num.+ @ a $dNum k n) }
+                   Math.Vector.Vector2 i j
+                   -> case ds1 of wild1 {
+                        DEFAULT -> Math.Vector.plus1 @ a
+                        Math.Vector.Vector2 l m
+                        -> Math.Vector.Vector2
+                             @ a
+                             (GHC.Num.+ @ a $dNum i l)
+                             (GHC.Num.+ @ a $dNum j m) } }) -}
+daf8e2ba09b1349379eb6d9c8d33a254
+  plus1 :: Math.Vector.Vector a
+  {- Strictness: x -}
+188cbf110a9d5c66ca251286205cbb3b
+  scale ::
+    (GHC.Num.Num a, GHC.Real.Fractional a) =>
+    Math.Vector.Vector a -> a -> Math.Vector.Vector a
+  {- Arity: 4, HasNoCafRefs,
+     Strictness: <L,A><L,1*U(1*U,A,A,A)><S,1*U><L,U>, Inline: INLINE[0],
+     Unfolding: InlineRule (4, True, True)
+                (\ @ a
+                   (w :: GHC.Num.Num a)
+                   (w1 :: GHC.Real.Fractional a)
+                   (w2 :: Math.Vector.Vector a)
+                   (w3 :: a) ->
+                 Math.Vector.$wscale @ a w1 w2 w3) -}
+569db5fb5afe3b152888c5a4e8d84668
+  unit ::
+    (GHC.Num.Num a, GHC.Real.Fractional a, GHC.Float.Floating a) =>
+    Math.Vector.Vector a
+    -> Math.Vector.Vector a -> Math.Vector.Vector a
+  {- Arity: 5,
+     Strictness: <L,A><L,1*U(1*U,A,A,A)><L,U(U,A,A,A,C(U),C(C1(U)),A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A)><S,U><S,U>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (5, True, True)
+                (\ @ a
+                   (w :: GHC.Num.Num a)
+                   (w1 :: GHC.Real.Fractional a)
+                   (w2 :: GHC.Float.Floating a)
+                   (w3 :: Math.Vector.Vector a)
+                   (w4 :: Math.Vector.Vector a) ->
+                 Math.Vector.$wunit @ a w1 w2 w3 w4) -}
+1eebae77048129b63c35d930eca4601b
+  unit1 :: GHC.Integer.Type.Integer
+  {- HasNoCafRefs, Unfolding: (1) -}
+aaa2126689db84a3eab048eebef53017
+  vecLength ::
+    (GHC.Num.Num a, GHC.Float.Floating a) => Math.Vector.Vector a -> a
+  {- Arity: 3,
+     Strictness: <L,A><S(LLLLC(S)LLLLLLLLLLLLLLLLLL),U(1*U,A,A,A,1*C1(U),C(C1(U)),A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A)><S,1*U>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (3, True, True)
+                (\ @ a
+                   (w :: GHC.Num.Num a)
+                   (w1 :: GHC.Float.Floating a)
+                   (w2 :: Math.Vector.Vector a) ->
+                 Math.Vector.$wvecLength @ a w1 w2) -}
+856446a271bbb7807eb60077c16fafe0
+  vecLength1 :: GHC.Integer.Type.Integer
+  {- HasNoCafRefs, Unfolding: (2) -}
+8ef8d3202754d1fa242ea9dff59ab986
+  vecLength2 :: a
+  {- Strictness: x -}
+7f5d468971fb1b53574db47dc14f1f45
+  zero :: GHC.Num.Num a => GHC.Types.Int -> Math.Vector.Vector a
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <L,1*U(A,A,A,A,A,A,1*C1(U))><L,1*U(U)>m1,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, False)
+                (\ @ a (w :: GHC.Num.Num a) (w1 :: GHC.Types.Int) ->
+                 case Math.Vector.$wzero @ a w w1 of ww { Unit# ww1 ->
+                 Math.Vector.Vector @ a ww1 }) -}
+instance [safe] GHC.Classes.Eq [Math.Vector.Vector]
+  = Math.Vector.$fEqVector
+instance [safe] GHC.Show.Show [Math.Vector.Vector]
+  = Math.Vector.$fShowVector
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: safe
+require own pkg trusted: False
+
